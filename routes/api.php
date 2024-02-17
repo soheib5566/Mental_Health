@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,7 @@ Route::middleware('api')->get('/users/{user:name}', [UserController::class, 'sho
 
 
 Route::middleware('api')->post('/authuser', [UserController::class, 'login']);
+
+//Doctors Route
+
+Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
