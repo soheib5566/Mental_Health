@@ -25,8 +25,9 @@ class UserController extends Controller
 
         $attributes['password'] = bcrypt($attributes['password']);
 
-
-        return User::create($attributes);
+        $user = User::create($attributes);
+        auth()->login($user);
+        return 'Successfully Registred';
         //    dd($request->all());
     }
 
@@ -58,11 +59,14 @@ class UserController extends Controller
         }
     }
 
-    public function logout(Request $request)
+    public function logout()
     {
+        if (auth()->check()) {
+            auth()->logout();
 
-        auth()->logout();
-
-        return 'Logout successfully';
+            return 'Logout successfully';
+        } else {
+            return 'user already Logout';
+        }
     }
 }
