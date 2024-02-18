@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/users', [UserController::class, 'store_user']);
+
+Route::get('/logoutuser', [UserController::class, 'logout']);

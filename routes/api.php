@@ -31,6 +31,8 @@ Route::middleware('api')->get('/users/{user:name}', [UserController::class, 'sho
 
 Route::middleware('api')->post('/authuser', [UserController::class, 'login']);
 
+Route::middleware('api')->get('/logoutuser', [UserController::class, 'logout']);
+
 //Doctors Route
 
 Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
