@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', [UserController::class, 'store_user']);
+// Route::get('/users', [UserController::class, 'store_user']);
 
-Route::get('/logoutuser', [UserController::class, 'logout']);
+// Route::get('/logoutuser', [UserController::class, 'logout']);
