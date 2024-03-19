@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(task::class);
     }
+
+    public function testscores(): HasMany
+    {
+        return $this->hasMany(Testscore::class);
+    }
 }
