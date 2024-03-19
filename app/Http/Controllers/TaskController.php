@@ -12,7 +12,7 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        $attributes = $request->request()->validate(
+        $attributes = $request->validate(
             [
                 'taskname' => 'required',
                 'date' => 'required|date',
@@ -21,8 +21,9 @@ class TaskController extends Controller
                 'user_id' => 'required|exists:users,id',
             ]
         );
-        $user = User::create($attributes);
 
-        return $user;
+        $task = task::create($attributes);
+
+        return response()->json($task);
     }
 }
