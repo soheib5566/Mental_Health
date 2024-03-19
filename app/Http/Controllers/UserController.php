@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use PhpParser\Node\Stmt\Return_;
 use Illuminate\Validation\ValidationException;
+use Laravel\Sanctum\PersonalAccessToken;
 
 class UserController extends Controller
 {
@@ -42,15 +44,18 @@ class UserController extends Controller
         return DB::table('users')->find($id);
     }
 
-    public function login()
+    public function login(Request $request)
     {
-        $keys = request()->validate([
+        $keys = $request->validate([
             'email' => 'required',
             'password' => 'required'
         ]);
 
         if (auth()->attempt($keys)) {
-            return 'Login succefully';
+
+            // $user = Auth::user();
+            // $token = $user->createToken($user->name)->plainTextToken;
+            return 'login successfully';
         } else {
             throw ValidationException::withMessages([
                 'email' => 'Email Address is wrong',
