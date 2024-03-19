@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -36,3 +37,7 @@ Route::get('/logoutuser', [UserController::class, 'logout']);
 //Doctors Route
 
 Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
+
+//Task Route
+
+Route::middleware('api')->get('/tasks', [TaskController::class, 'store']);
