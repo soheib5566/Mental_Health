@@ -10,7 +10,7 @@ class Testscore extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['testscores'];
+    protected $fillable = ['totalscores', 'user_id'];
 
     public function user(): BelongsTo
     {
