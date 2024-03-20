@@ -24,6 +24,41 @@ class TaskController extends Controller
 
         $task = task::create($attributes);
 
-        return response()->json($task);
+        return response()->json("Task has been Added");
+    }
+
+    public function completed(Request $request, $id)
+    {
+        $request->validate(
+            [
+                'completed' => 'boolean|required'
+            ]
+        );
+
+        $task = task::find($id);
+
+        if (!$task) {
+            return response()->json(['message' => 'Task not found'], 404);
+        }
+
+        if ($task->completed == 0) {
+            $task->update(['completed' => $request['completed']]);
+
+            $task->save();
+
+            return response()->json(['message' => 'Task Has been Completed']);
+        }
+
+
+
+        return response()->json(['message' => 'Task is Already Completed']);
+    }
+
+
+    public function index($id)
+    {
+        $user = User::find($id)->tasks;
+
+        return response()->json(['tasks' => $user]);
     }
 }

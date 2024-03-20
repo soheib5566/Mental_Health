@@ -40,4 +40,8 @@ Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
 
 //Task Route
 
-Route::middleware('api')->post('/tasks', [TaskController::class, 'store']);
+Route::middleware('api')->post('/task', [TaskController::class, 'store']);
+
+Route::middleware('api')->post('/tskcompleted/{id}', [TaskController::class, 'completed']);
+
+Route::middleware('api')->get('/tasks/{id}', [TaskController::class, 'index']);
