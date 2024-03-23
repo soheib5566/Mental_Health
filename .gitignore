@@ -16,3 +16,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+database/migrations/2024_03_20_082339_drop_column_location_from__users_table.php
