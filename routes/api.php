@@ -22,33 +22,40 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-//Users Routes
 
-Route::middleware('api')->post('/user', [UserController::class, 'store_user']);
+// register route
+Route::post('/register', [UserController::class, 'register']);
 
-Route::middleware('api')->get('/users', [UserController::class, 'index_users']);
-
-Route::middleware('api')->get('/users/{user:name}', [UserController::class, 'show']);
-
-
+//logout Router
 Route::middleware('api')->post('/authuser', [UserController::class, 'login']);
 
-Route::get('/logoutuser', [UserController::class, 'logout']);
+//middleware group to authincate that user can't join these
+//endpoints without the sanctum Authincation
+Route::group(['middleware' => ['auth:sanctum']], function () {
 
-//Doctors Route
+    //Users Routes
+    Route::get('/users', [UserController::class, 'index_users']);
 
-Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
+    Route::get('/users/{user:name}', [UserController::class, 'show']);
 
-//Task Route
+    Route::post('/logout', [UserController::class, 'logout']);
 
-Route::middleware('api')->post('/task', [TaskController::class, 'store']);
+    //Doctors Route
 
-Route::middleware('api')->post('/tskcompleted/{id}', [TaskController::class, 'completed']);
+    Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
 
-Route::middleware('api')->get('/tasks/{id}', [TaskController::class, 'index']);
 
-//Testscore Route
+    //Task Route
 
-Route::middleware('api')->post('/testscore', [TestscoreController::class, 'store']);
+    Route::middleware('api')->post('/task', [TaskController::class, 'store']);
 
-Route::middleware('api')->get('/testscores/{id}', [TestscoreController::class, 'index']);
+    Route::middleware('api')->post('/tskcompleted/{id}', [TaskController::class, 'completed']);
+
+    Route::middleware('api')->get('/tasks/{id}', [TaskController::class, 'index']);
+
+    //Testscore Route
+
+    Route::middleware('api')->post('/testscore', [TestscoreController::class, 'store']);
+
+    Route::middleware('api')->get('/testscores/{id}', [TestscoreController::class, 'index']);
+});
