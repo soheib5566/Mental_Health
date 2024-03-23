@@ -70,11 +70,11 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
+        $user = User::where('email', $keys['email'])->first();
 
         if (auth()->attempt($keys)) {
-
-
-            return response()->json(['message' => 'login successfully']);
+            $token = $user->createToken($user->name)->plainTextToken;
+            return response()->json(['message' => 'login successfully', 'token' => $token]);
         } else {
             throw ValidationException::withMessages([
                 'email' => 'Email Address is wrong',
@@ -89,9 +89,7 @@ class UserController extends Controller
             // @ts-ignore
             auth()->user()->tokens()->delete();
 
-            return 'Logout successfully';
-        } else {
-            return 'user already Logout';
+            return response()->json(['message' => 'Logout successfully']);
         }
     }
 }
