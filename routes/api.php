@@ -42,7 +42,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //Doctors Route
 
-    Route::middleware('api')->get('/doctors', [DoctorController::class, 'index']);
+    Route::get('/doctors', [DoctorController::class, 'index']);
+
 
 
     //Task Route
@@ -52,6 +53,10 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::middleware('api')->post('/tskcompleted/{id}', [TaskController::class, 'completed']);
 
     Route::middleware('api')->get('/tasks/{id}', [TaskController::class, 'index']);
+
+    Route::get('/taskslast7days', [TaskController::class, 'Getlast7days']);
+
+    Route::get('/taskalast30days', [TaskController::class, 'Getlast30days']);
 
     //Testscore Route
 
