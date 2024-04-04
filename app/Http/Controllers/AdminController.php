@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Admin;
 use App\Models\User;
+use App\Models\Doctor;
 
 class AdminController extends Controller
 {
@@ -38,15 +39,27 @@ class AdminController extends Controller
 
     public function admindash()
     {
-    }
 
-    public function indexusers()
-    {
+        $doctor = Doctor::count();
+        $user = User::count();
         $users = User::all();
-        return view("adminDashBoard", ['users' => $users]);
+        return view('index', ['doctors' => $doctor, 'userscount' => $user, 'users' => $users]);
+    }
+    public function getuserspg()
+    {
+
+        return view('index');
     }
 
-    public function indexdoctors()
-    {
-    }
+    // public function indexdoctors()
+    // {
+    //     $doctors = Doctor::get();
+    //     return view('admindash');
+    // }
+
+
+    // public function getdoctorspg()
+    // {
+    //     return view('Doctors');
+    // }
 }
