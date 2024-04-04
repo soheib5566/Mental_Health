@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\task;
 use App\Models\User;
+use Carbon\Carbon;
 
 class TaskController extends Controller
 {
@@ -60,5 +61,52 @@ class TaskController extends Controller
         $user = User::find($id)->tasks;
 
         return response()->json(['tasks' => $user]);
+    }
+
+    public function Getlast7days()
+    {
+        $startdate = Carbon::now()->subDays(7)->startOfDay();
+
+        $enddate = Carbon::now()->endOfDay();
+
+
+        $tasks_7 = task::whereBetween('date', [$startdate, $enddate])->get();
+
+        $completed = 0;
+        foreach ($tasks_7 as $task) {
+
+            if ($task->completed == 1) {
+                $completed += 1;
+            }
+        }
+        $not_completed = count($tasks_7) - $completed;
+
+        return response()->json([
+            'Tasks' => count($tasks_7), 'completed' => $completed, 'not_completed' => $not_completed
+        ]);
+    }
+
+
+    public function Getlast30days()
+    {
+        $startdate = Carbon::now()->subDays(30)->startOfDay();
+
+        $enddate = Carbon::now()->endOfDay();
+
+
+        $tasks_30 = task::whereBetween('date', [$startdate, $enddate])->get();
+
+        $completed = 0;
+        foreach ($tasks_30 as $task) {
+
+            if ($task->completed == 1) {
+                $completed += 1;
+            }
+        }
+        $not_completed = count($tasks_30) - $completed;
+
+        return response()->json([
+            'Tasks' => count($tasks_30), 'completed' => $completed, 'not_completed' => $not_completed
+        ]);
     }
 }
