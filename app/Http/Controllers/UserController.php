@@ -25,7 +25,6 @@ class UserController extends Controller
             'name' => 'required|unique:users,name',
             'email' => 'required|unique:users,email|email',
             'password' => 'required|min:8|max:30',
-            'phone' => 'required|max:11'
         ], [
             'name.required' => 'The name field is required.',
             'name.unique' => 'The name has already been taken.',
@@ -35,8 +34,6 @@ class UserController extends Controller
             'password.required' => 'The password field is required.',
             'password.min' => 'The password must be at least :8 Digits .',
             'password.max' => 'The password may not be greater than :30 Digits.',
-            'phone.required' => 'The phone field is required.',
-            'phone.max' => 'the Phone conisist of 11 numbers'
         ]);
 
         $attributes['password'] = bcrypt($attributes['password']);
@@ -91,5 +88,27 @@ class UserController extends Controller
 
             return response()->json(['message' => 'Logout successfully']);
         }
+    }
+
+
+    public function Destroy($id)
+    {
+        User::destroy($id);
+
+        return redirect('/admindash');
+    }
+
+    public function Block($id)
+    {
+        $user = User::findOrFail($id);
+
+        if ($user['is_allowed']) {
+            $user['is_allowed'] = 0;
+            $user->save();
+        }
+
+
+
+        return redirect('/admindash');
     }
 }
