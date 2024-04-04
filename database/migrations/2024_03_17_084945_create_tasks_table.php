@@ -20,7 +20,7 @@ return new class extends Migration
             $table->time("firsttime");
             $table->time("endtime");
             $table->boolean("completed")->default(false);
-            $table->foreignId("user_id")->references('id')->on("users");
+            $table->foreignId("user_id")->references('id')->on("users")->onDelete('cascade');
             $table->timestamps();
         });
     }

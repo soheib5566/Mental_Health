@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('testscores', function (Blueprint $table) {
             $table->id();
             $table->integer('totalscores');
-            $table->foreignId("user_id")->references("id")->on("users");
+            $table->foreignId("user_id")->references("id")->on("users")->onDelete('cascade');
             $table->timestamps();
         });
     }
