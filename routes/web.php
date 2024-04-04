@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\admincontroller;
+use App\Http\Controllers\DoctorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +20,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/admindash', [admincontroller::class, 'admindash']);
+
+Route::get('/doctors', [admincontroller::class, 'getdoctorspg']);
+
+Route::delete('admindash/{id}', [UserController::class, 'Destroy']);
+
+Route::post("/admin/{id}", [UserController::class, 'Block'])->name('admin.block');
+
+Route::get('/doctors', [DoctorController::class, 'indexdoctors']);
+
+Route::get('/add_doctor', [DoctorController::class, 'add_page']);
+
+
+
+// Route::get('/admindash/users', [admincontroller::class, 'indexusers']);
 // Route::get('/users', [UserController::class, 'store_user']);
 
 // Route::get('/logoutuser', [UserController::class, 'logout']);
