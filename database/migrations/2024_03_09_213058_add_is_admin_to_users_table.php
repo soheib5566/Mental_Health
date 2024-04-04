@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
             $table->boolean('is_admin')->default(false);
         });
