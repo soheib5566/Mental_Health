@@ -22,8 +22,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'phone',
         'is_admin',
+        'code',
+        'expires_at',
 
     ];
 
@@ -46,6 +47,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    // protected $guarded = [
+    //     'name',
+    //     'email',
+    //     'password',
+    //     'phone',
+    //     'is_admin',
+    // ];
+
     public function tasks(): HasMany
     {
         return $this->hasMany(task::class);
@@ -54,5 +63,19 @@ class User extends Authenticatable
     public function testscores(): HasMany
     {
         return $this->hasMany(Testscore::class);
+    }
+
+    public function generete_code()
+    {
+        $this->code = rand(1000, 9999);
+        $this->expires_at = now()->addMinutes(5);
+        $this->save();
+    }
+
+    public function reset_code()
+    {
+        $this->code = null;
+        $this->expires_at = null;
+        $this->save();
     }
 }
