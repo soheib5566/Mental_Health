@@ -3,14 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Notifications\TwoFactor;
 use Dotenv\Validator;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session as FacadesSession;
 use PhpParser\Node\Stmt\Return_;
 use Illuminate\Validation\ValidationException;
 use Laravel\Sanctum\PersonalAccessToken;
+use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
@@ -22,12 +26,11 @@ class UserController extends Controller
 
 
         $attributes = $request->validate([
-            'name' => 'required|unique:users,name',
+            'name' => 'required',
             'email' => 'required|unique:users,email|email',
             'password' => 'required|min:8|max:30',
         ], [
             'name.required' => 'The name field is required.',
-            'name.unique' => 'The name has already been taken.',
             'email.required' => 'The email field is required.',
             'email.unique' => 'The email has already been taken.',
             'email.email' => 'The email must be a valid email address.',
@@ -38,10 +41,13 @@ class UserController extends Controller
 
         $attributes['password'] = bcrypt($attributes['password']);
 
+
         $user = User::create($attributes);
-        $token = $user->createToken($user->name)->plainTextToken;
-        return response()->json(['user' => $user, 'token' => $token]);
-        //    dd($request->all());
+        $user->generete_code();
+
+        $user->notify(new TwoFactor);
+
+        return response()->json([], 200);
     }
 
     //function is trrigered when the user hit error with fields
@@ -68,6 +74,7 @@ class UserController extends Controller
             'password' => 'required'
         ]);
         $user = User::where('email', $keys['email'])->first();
+
 
         if (auth()->attempt($keys)) {
             $token = $user->createToken($user->name)->plainTextToken;
