@@ -25,6 +25,10 @@ class User extends Authenticatable
         'is_admin',
         'code',
         'expires_at',
+        'DOB',
+        'gender',
+        'image',
+        'phone',
 
     ];
 

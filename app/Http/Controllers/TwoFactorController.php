@@ -22,9 +22,7 @@ class TwoFactorController extends Controller
                 'otp.digits' => 'OTP Code must have 4 Digits'
             ]
         ]);
-        // dd($request->session()->get('usr'));
 
-        // $user = User::create($request->session()->get('usr'));
 
         $user = User::findOrFail($request->id);
         if ($user->code != $request->otp) {
@@ -61,7 +59,7 @@ class TwoFactorController extends Controller
 
         $user->generete_code();
 
-        // $user->notify(new TwoFactor);
+        $user->notify(new TwoFactor);
         return response([], 200);
     }
 }
