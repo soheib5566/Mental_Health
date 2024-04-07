@@ -3,6 +3,7 @@
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TestscoreController;
+use App\Http\Controllers\TwoFactorController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,7 +27,11 @@ use Illuminate\Support\Facades\Route;
 // register route
 Route::post('/register', [UserController::class, 'register']);
 
-//logout Router
+Route::post('/verify', [TwoFactorController::class, 'Verify_otp']);
+
+Route::post('/resend_otp', [TwoFactorController::class, 'Resend_otp']);
+
+//login Router
 Route::middleware('api')->post('/authuser', [UserController::class, 'login']);
 
 //middleware group to authincate that user can't join these
@@ -39,6 +44,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/users/{user:name}', [UserController::class, 'show']);
 
     Route::post('/logout', [UserController::class, 'logout']);
+
 
     //Doctors Route
 
