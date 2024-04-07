@@ -29,6 +29,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|unique:users,email|email',
             'password' => 'required|min:8|max:30',
+            'image' => 'nullable|image'
         ], [
             'name.required' => 'The name field is required.',
             'email.required' => 'The email field is required.',
@@ -39,8 +40,10 @@ class UserController extends Controller
             'password.max' => 'The password may not be greater than :30 Digits.',
         ]);
 
+
         $attributes['password'] = bcrypt($attributes['password']);
 
+        $attributes['image'] = public_path('image\icon_profile');
 
         $user = User::create($attributes);
         $user->generete_code();
@@ -114,8 +117,45 @@ class UserController extends Controller
             $user->save();
         }
 
-
-
         return redirect('/admindash');
+    }
+
+    public function put_user(Request $request)
+    {
+
+        $attributes = $request->validate([
+            'id' => 'nullable|exists:users,id',
+            'name' => 'nullable|string',
+            'phone' => 'nullable|string|unique:users,phone,except,id|min:11',
+            'gender' => 'nullable|string',
+            'DOB' => 'nullable|date|date_format:Y/m/d',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+        ], [
+            'phone.unique' => 'this Phone Number Already used.',
+            'phone.min' => 'the phone consist of 11 numbers.',
+            'DOB.date' => 'enter a valid Date.',
+            'image.image' => 'Supported Extension is image.',
+            'image.mimes' => 'The image must be a type of: jpeg, png, jpg, gif.',
+            'id.required' => 'ID Not exist.',
+        ]);
+
+        // dd($attributes);
+
+        $user = User::findOrFail($attributes['id']);
+
+        $user->phone = $attributes['phone'];
+        $user->gender = $attributes['gender'];
+        $user->DOB = $attributes['DOB'];
+
+        if ($request->hasFile('image')) {
+            $imagepath = $request->file('image')->store('public/image');
+            $relativePath = str_replace('public/', '', $imagepath);
+            $fullPath = public_path($relativePath);
+            $request->file('image')->move(dirname($fullPath), basename($fullPath));
+            $user->image = $relativePath;
+        }
+        $user->save();
+
+        return response()->json(['message' => 'User Profile Updated']);
     }
 }
