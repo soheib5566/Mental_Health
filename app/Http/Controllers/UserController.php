@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session as FacadesSession;
 use PhpParser\Node\Stmt\Return_;
 use Illuminate\Validation\ValidationException;
@@ -68,10 +67,6 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-
-        // $image = storage_path('app\public\\' . $user->image);
-        // // dd($image);
-        // return view('image', ['image' => $user->image]);
 
         if (Storage::exists('public/' . $user->image)) {
 

@@ -14,17 +14,28 @@ class TestscoreController extends Controller
     {
         $attributes = $request->validate([
             'totalscores' => 'required|integer',
-            'user_id' => 'required|exists:users,id'
+            'mentalscores' => 'required|integer',
+            'phyicalscores' => 'required|integer',
+            'user_id' => 'required|exists:users,id',
         ]);
         $testscore = Testscore::create($attributes);
 
-        return response()->json($testscore);
+        return response()->json(["message" => 'Score has been added']);
     }
 
     public function index($id)
     {
-        $testscore = User::find($id)->testscores;
+        $testscores = User::find($id)->testscores;
+        $testscoresdt = [];
+        foreach ($testscores as $testscore) {
+            $testscoresdt[] =
+                [
+                    'totalscores' => $testscore->totalscores,
+                    'phyicalscores' => $testscore->phyicalscores,
+                    'mentalscores' => $testscore->mentalscores
+                ];
+        }
 
-        return response()->json(['testscore' => $testscore]);
+        return response()->json($testscoresdt);
     }
 }

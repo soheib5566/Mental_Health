@@ -18,25 +18,26 @@ class TaskController extends Controller
                 'taskname' => 'required',
                 'date' => 'required|date',
                 'firsttime' => 'required|date_format:H:i',
-                'endtime' => 'required|date_format:H:i|after:firsttime',
+                'endtime' => 'required|date_format:H:i',
                 'user_id' => 'required|exists:users,id',
             ]
         );
 
         $task = task::create($attributes);
 
-        return response()->json("Task has been Added");
+        return response()->json(["message" => "Task has been Added"]);
     }
 
-    public function completed(Request $request, $id)
+    public function completed(Request $request)
     {
         $request->validate(
             [
-                'completed' => 'boolean|required'
+                'completed' => 'boolean|required',
+                'id' => 'required|exists:tasks,id'
             ]
         );
 
-        $task = task::find($id);
+        $task = task::findOrFail($request->id);
 
         if (!$task) {
             return response()->json(['message' => 'Task not found'], 404);
@@ -58,19 +59,33 @@ class TaskController extends Controller
 
     public function index($id)
     {
-        $user = User::find($id)->tasks;
+        $user = User::find($id);
+        $tasks = $user->tasks()->select(['id', 'date', 'taskname', 'firsttime', 'endtime'])->get();
 
-        return response()->json(['tasks' => $user]);
+        $taskdata = [];
+        foreach ($tasks as $task) {
+            $taskdata[] =
+                [
+                    'id' => $task->id,
+                    'date' => $task->date,
+                    'taskname' => $task->taskname,
+                    'firsttime' => $task->firsttime,
+                    'endtime' => $task->endtime
+                ];
+        }
+
+
+        return response()->json($taskdata);
     }
 
-    public function Getlast7days()
+    public function Getlast7days($id)
     {
         $startdate = Carbon::now()->subDays(7)->startOfDay();
 
         $enddate = Carbon::now()->endOfDay();
 
-
-        $tasks_7 = task::whereBetween('date', [$startdate, $enddate])->get();
+        $user = User::findOrFail($id);
+        $tasks_7 = $user->tasks()->whereBetween('date', [$startdate, $enddate])->get();
 
         $completed = 0;
         foreach ($tasks_7 as $task) {
@@ -87,14 +102,14 @@ class TaskController extends Controller
     }
 
 
-    public function Getlast30days()
+    public function Getlast30days($id)
     {
         $startdate = Carbon::now()->subDays(30)->startOfDay();
 
         $enddate = Carbon::now()->endOfDay();
 
-
-        $tasks_30 = task::whereBetween('date', [$startdate, $enddate])->get();
+        $user = User::findOrFail($id);
+        $tasks_30 = $user->tasks()->whereBetween('date', [$startdate, $enddate])->get();
 
         $completed = 0;
         foreach ($tasks_30 as $task) {

@@ -6,6 +6,7 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TestscoreController;
 use App\Http\Controllers\TwoFactorController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DailymoodController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -61,19 +62,29 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //Task Route
 
-    Route::middleware('api')->post('/task', [TaskController::class, 'store']);
+    Route::middleware('api')->post('/store_task', [TaskController::class, 'store']);
 
     Route::middleware('api')->post('/tskcompleted/{id}', [TaskController::class, 'completed']);
 
     Route::middleware('api')->get('/tasks/{id}', [TaskController::class, 'index']);
 
-    Route::get('/taskslast7days', [TaskController::class, 'Getlast7days']);
+    Route::get('/taskslast7days/{id}', [TaskController::class, 'Getlast7days']);
 
-    Route::get('/taskalast30days', [TaskController::class, 'Getlast30days']);
+    Route::get('/taskalast30days/{id}', [TaskController::class, 'Getlast30days']);
 
     //Testscore Route
 
     Route::middleware('api')->post('/testscore', [TestscoreController::class, 'store']);
 
     Route::middleware('api')->get('/testscores/{id}', [TestscoreController::class, 'index']);
+
+    //moods Route
+
+    Route::post('/store_mood', [DailymoodController::class, 'store']);
+
+    Route::get('/moodlast7days/{id}', [DailymoodController::class, 'getlast7days']);
+
+    Route::get('/moodlast30days/{id}', [DailymoodController::class, 'getlast30days']);
+
+    Route::get('/user_moods/{id}', [DailymoodController::class, 'index_moods']);
 });

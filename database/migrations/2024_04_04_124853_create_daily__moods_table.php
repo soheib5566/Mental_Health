@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('testscores', function (Blueprint $table) {
+        Schema::create('dailymoods', function (Blueprint $table) {
             $table->id();
-            $table->integer('totalscores');
-            $table->integer('phyicalscores');
-            $table->integer('mentalscores');
-            $table->foreignId("user_id")->references("id")->on("users")->onDelete('cascade');
+            $table->integer("value");
+            $table->string("mood");
+            $table->dateTime("datetime");
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('testscores');
+        Schema::dropIfExists('daily__mood');
     }
 };

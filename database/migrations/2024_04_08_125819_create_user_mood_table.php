@@ -13,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('testscores', function (Blueprint $table) {
-            $table->id();
-            $table->integer('totalscores');
-            $table->integer('phyicalscores');
-            $table->integer('mentalscores');
-            $table->foreignId("user_id")->references("id")->on("users")->onDelete('cascade');
+        Schema::create('user_mood', function (Blueprint $table) {
+            $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignId('dailymood_id')->references('id')->on('dailymoods')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('testscores');
+        Schema::dropIfExists('user_mood');
     }
 };
