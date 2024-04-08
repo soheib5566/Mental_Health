@@ -37,8 +37,7 @@ Route::middleware('api')->post('/authuser', [UserController::class, 'login']);
 
 Route::put('/user/update_profile', [UserController::class, 'put_user']);
 
-// Route::post('/users/update-email', [UserController::class, 'updateEmail']);
-
+Route::get('/users/{user:name}', [UserController::class, 'show']);
 //middleware group to authincate that user can't join these
 //endpoints without the sanctum Authincation
 Route::group(['middleware' => ['auth:sanctum']], function () {
@@ -46,7 +45,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     //Users Routes
     Route::get('/users', [UserController::class, 'index_users']);
 
-    Route::get('/users/{user:name}', [UserController::class, 'show']);
 
     Route::post('/logout', [UserController::class, 'logout']);
 

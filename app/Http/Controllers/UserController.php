@@ -15,6 +15,7 @@ use PhpParser\Node\Stmt\Return_;
 use Illuminate\Validation\ValidationException;
 use Laravel\Sanctum\PersonalAccessToken;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -66,8 +67,21 @@ class UserController extends Controller
 
     public function show($id)
     {
+        $user = User::findOrFail($id);
 
-        return DB::table('users')->find($id);
+        // $image = storage_path('app\public\\' . $user->image);
+        // // dd($image);
+        // return view('image', ['image' => $user->image]);
+
+        if (Storage::exists('public/' . $user->image)) {
+
+
+            // Return the image file in the response
+            return response(['name' => $user->name, 'phone' => $user->phone, 'gender' => $user->gender, 'DOB' => $user->DOB, 'image' => url($user->image)]);
+        } else {
+            // Return a response indicating that the file doesn't exist
+            return response()->json(['message' => 'Image not found'], 404);
+        }
     }
 
     public function login(Request $request)
@@ -156,6 +170,7 @@ class UserController extends Controller
         }
         $user->save();
 
-        return response()->json(['message' => 'User Profile Updated']);
+        // return response()->json(['message' => 'User Profile Updated']);
+        return response($fullPath);
     }
 }
