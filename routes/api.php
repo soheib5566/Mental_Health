@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\TestscoreController;
 use App\Http\Controllers\TwoFactorController;
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-// register route
+//Register route
 Route::post('/register', [UserController::class, 'register']);
 
 //OTP Route
@@ -32,24 +33,26 @@ Route::post('/verify', [TwoFactorController::class, 'Verify_otp']);
 
 Route::post('/resend_otp', [TwoFactorController::class, 'Resend_otp']);
 
-//login Router
-Route::middleware('api')->post('/authuser', [UserController::class, 'login']);
+//Login Router
+Route::middleware('api')->post('/login', [UserController::class, 'login']);
 
-Route::put('/user/update_profile', [UserController::class, 'put_user']);
+//Password Route
+Route::post('/forget_password', [PasswordController::class, 'forget_pass']);
 
-Route::get('/users/{user:name}', [UserController::class, 'show']);
+Route::post('/reset_password', [PasswordController::class, 'reset_password']);
+
 //middleware group to authincate that user can't join these
-//endpoints without the sanctum Authincation
+//endpoints without the sanctum Authincation(Token)
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
     //Users Routes
     Route::get('/users', [UserController::class, 'index_users']);
 
-
     Route::post('/logout', [UserController::class, 'logout']);
 
+    Route::put('/user/update_profile', [UserController::class, 'put_user']);
 
-
+    Route::get('/users/{user:name}', [UserController::class, 'show']);
     //Doctors Route
 
     Route::get('/doctors', [DoctorController::class, 'index']);

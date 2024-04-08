@@ -93,13 +93,14 @@ class UserController extends Controller
         $user = User::where('email', $keys['email'])->first();
 
 
-        if (auth()->attempt($keys)) {
+        if (auth()->attempt($keys) && password_verify($request->password, $user->password)) {
             $token = $user->createToken($user->name)->plainTextToken;
-            return response()->json(['message' => 'login successfully', 'token' => $token]);
+
+            return response()->json(['id' => $user->id, 'Name' => $user->name, 'email' => $user->email, 'token' => $token]);
         } else {
             throw ValidationException::withMessages([
-                'email' => 'Email Address is wrong',
-                'password' => 'Password is wrong'
+                'email' => 'Email Address is wrong or Password',
+
             ]);
         }
     }
