@@ -33,7 +33,9 @@ Route::get('/doctors', [DoctorController::class, 'indexdoctors']);
 
 Route::get('/add_doctor', [DoctorController::class, 'add_page']);
 
-
+Route::get('/info', function () {
+    phpinfo();
+});
 
 // Route::get('/admindash/users', [admincontroller::class, 'indexusers']);
 // Route::get('/users', [UserController::class, 'store_user']);
