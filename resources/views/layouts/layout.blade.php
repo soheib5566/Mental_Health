@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Boxicons -->
-	<link href="{{ asset('https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css') }}" rel='stylesheet'>
+	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href="{{secure_asset('css/style.css')}}">
 
 	<title>Dashboard</title>
 </head>
@@ -126,7 +126,7 @@
 			@yield('content')
 		</main>
 	</section>
-	<script src="{{ asset('js/script.js') }}"></script>
+	<script src="{{ secure_asset('js/script.js') }}"></script>
 </body>
 
 </html>
