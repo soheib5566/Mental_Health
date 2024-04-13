@@ -50,7 +50,7 @@ class UserController extends Controller
 
         $user->notify(new TwoFactor);
 
-        return response()->json([], 200);
+        return response()->json(['id' => $user->id], 200);
     }
 
     //function is trrigered when the user hit error with fields

@@ -60,6 +60,6 @@ class TwoFactorController extends Controller
         $user->generete_code();
 
         $user->notify(new TwoFactor);
-        return response([], 200);
+        return response(['message' => 'OTP Resent'], 200);
     }
 }

@@ -36,6 +36,6 @@ class TestscoreController extends Controller
                 ];
         }
 
-        return response()->json($testscoresdt);
+        return response(['message' => 'Score has been added'])->json($testscoresdt);
     }
 }
