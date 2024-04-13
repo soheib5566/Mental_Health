@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctors Table</title>
-    <link rel="stylesheet" href="{{asset('css/Doctors_style.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/Doctors_style.css')}}">
 </head>
 <body>
     <div class="container">
@@ -47,6 +47,6 @@
             </tbody>
         </table>
     </div>
-    <script src="{{asset('js/Doctors_lava.js')}}"></script>
+    <script src="{{secure_asset('js/Doctors_lava.js')}}"></script>
 </body>
 </html>
