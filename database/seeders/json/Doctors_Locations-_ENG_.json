@@ -1,0 +1,1964 @@
+[
+  {
+    "ID": 1,
+    "Lat": 31.11446837806,
+    "Long": 30.940386787959,
+    "Description": "Dr. Aida Nofal",
+    "Rate": "4.2",
+    "Governorate": "Kafr El Sheikh",
+    "Phone": "1066083256"
+  },
+  {
+    "ID": 2,
+    "Lat": 31.121499405352,
+    "Long": 30.948652219092,
+    "Description": "Zad Center",
+    "Rate": "-",
+    "Governorate": "Kafr El Sheikh",
+    "Phone": "1007971168"
+  },
+  {
+    "ID": 3,
+    "Lat": 31.149539926983,
+    "Long": 30.971303182896,
+    "Description": "Ayadi Center",
+    "Rate": "5",
+    "Governorate": "Kafr El Sheikh",
+    "Phone": "1093929637"
+  },
+  {
+    "ID": 4,
+    "Lat": 31.112971869624,
+    "Long": 30.9366848362,
+    "Description": "Dr. Sherine Mohamed",
+    "Rate": "-",
+    "Governorate": "Kafr El Sheikh",
+    "Phone": "1061532127"
+  },
+  {
+    "ID": 5,
+    "Lat": 31.129869595713,
+    "Long": 30.66319886307,
+    "Description": "Creativity Center",
+    "Rate": "4.9",
+    "Governorate": "Kafr El Sheikh",
+    "Phone": "1007658726"
+  },
+  {
+    "ID": 6,
+    "Lat": 31.114885861589,
+    "Long": 30.939146966342,
+    "Description": "Dr. Aida Nofal",
+    "Rate": "3",
+    "Governorate": "Kafr El Sheikh",
+    "Phone": "1004099967"
+  },
+  {
+    "ID": 7,
+    "Lat": 30.9729169879,
+    "Long": 31.170980884189,
+    "Description": "Dr. Mohamed Taha",
+    "Rate": "4.5",
+    "Governorate": "Gharbia-Mahalla",
+    "Phone": "1553599154"
+  },
+  {
+    "ID": 8,
+    "Lat": 30.807623928296,
+    "Long": 30.994646848077,
+    "Description": "Dr. Ahmed Al-Ghoneimi",
+    "Rate": "5",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "1289881192"
+  },
+  {
+    "ID": 9,
+    "Lat": 30.802810607406,
+    "Long": 30.99383716118,
+    "Description": "Psychiatric Center",
+    "Rate": "3.4",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "403400040"
+  },
+  {
+    "ID": 10,
+    "Lat": 30.784158655486,
+    "Long": 30.995813041396,
+    "Description": "Dr. Mohamed Abdel Hakim Selim",
+    "Rate": "1.8",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "403337731"
+  },
+  {
+    "ID": 11,
+    "Lat": 30.785623841541,
+    "Long": 30.995824011431,
+    "Description": "Dr. Wael Fadel",
+    "Rate": "5",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "403358480"
+  },
+  {
+    "ID": 12,
+    "Lat": 30.786582374612,
+    "Long": 30.995729250109,
+    "Description": "Dr. Azza Abbas",
+    "Rate": "-",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "1227984473"
+  },
+  {
+    "ID": 13,
+    "Lat": 30.783540608609,
+    "Long": 30.995939253464,
+    "Description": "Dr. Ahmed Mubarak",
+    "Rate": "5",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "403353960"
+  },
+  {
+    "ID": 14,
+    "Lat": 30.794492391916,
+    "Long": 30.967866653464,
+    "Description": "Al Masa Center",
+    "Rate": "-",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "1010293972"
+  },
+  {
+    "ID": 15,
+    "Lat": 30.789799079132,
+    "Long": 31.000564343649,
+    "Description": "Dr. Jihan Abdel Hamid",
+    "Rate": "-",
+    "Governorate": "Gharbia-Tanta",
+    "Phone": "1060334418"
+  },
+  {
+    "ID": 16,
+    "Lat": 30.020250790892,
+    "Long": 31.435567414457,
+    "Description": "Dr. Mahmoud Alwasifi",
+    "Rate": "5",
+    "Governorate": "Cairo",
+    "Phone": "1010818581"
+  },
+  {
+    "ID": 17,
+    "Lat": 29.965969314183,
+    "Long": 31.254092833626,
+    "Description": "Ma'an Center",
+    "Rate": "-",
+    "Governorate": "Cairo",
+    "Phone": "1115999738"
+  },
+  {
+    "ID": 18,
+    "Lat": 30.055757820187,
+    "Long": 31.346498842342,
+    "Description": "Dr. Ahmed Haroun",
+    "Rate": "3.7",
+    "Governorate": "Cairo",
+    "Phone": "1029896666"
+  },
+  {
+    "ID": 19,
+    "Lat": 30.053136125847,
+    "Long": 31.3378833104,
+    "Description": " Zat Center",
+    "Rate": "4.5",
+    "Governorate": "Cairo",
+    "Phone": "1009381895"
+  },
+  {
+    "ID": 20,
+    "Lat": 30.06885953164,
+    "Long": 31.354270405,
+    "Description": "Edraak Center",
+    "Rate": "4.3",
+    "Governorate": "Cairo",
+    "Phone": "1288003590"
+  },
+  {
+    "ID": 21,
+    "Lat": 30.067739891737,
+    "Long": 31.332086980914,
+    "Description": "Dr. Ahmed Saeed",
+    "Rate": "4.2",
+    "Governorate": "Cairo",
+    "Phone": "1022630411"
+  },
+  {
+    "ID": 22,
+    "Lat": 30.067437942821,
+    "Long": 31.321119279381,
+    "Description": "Psychiatric clinics ",
+    "Rate": "3.7",
+    "Governorate": "Cairo",
+    "Phone": "1141055503"
+  },
+  {
+    "ID": 23,
+    "Lat": 30.014441667329,
+    "Long": 31.283045754461,
+    "Description": "Dr. Ahmed Hussein",
+    "Rate": "5",
+    "Governorate": "Cairo",
+    "Phone": "1277572225"
+  },
+  {
+    "ID": 24,
+    "Lat": 30.101627382297,
+    "Long": 31.343555485119,
+    "Description": "Dr. Karim Darwish",
+    "Rate": "4.2",
+    "Governorate": "Cairo",
+    "Phone": "1222154741"
+  },
+  {
+    "ID": 25,
+    "Lat": 30.287866410335,
+    "Long": 31.746920942811,
+    "Description": "Zad Center",
+    "Rate": "5",
+    "Governorate": "Cairo",
+    "Phone": "1204470039"
+  },
+  {
+    "ID": 26,
+    "Lat": 30.049455739738,
+    "Long": 31.379741906303,
+    "Description": "You are not alone center",
+    "Rate": "4",
+    "Governorate": "Cairo",
+    "Phone": "1118668934"
+  },
+  {
+    "ID": 27,
+    "Lat": 30.049175006261,
+    "Long": 31.377037594641,
+    "Description": "Dr. Tamer Sedky",
+    "Rate": "-",
+    "Governorate": "Cairo",
+    "Phone": "1004430572"
+  },
+  {
+    "ID": 28,
+    "Lat": 30.064810613053,
+    "Long": 31.344946213936,
+    "Description": "Dr. Mohammed Alshami",
+    "Rate": "4.7",
+    "Governorate": "Cairo",
+    "Phone": "-"
+  },
+  {
+    "ID": 29,
+    "Lat": 30.073066833904,
+    "Long": 31.317129657745,
+    "Description": "Dr. Yasser Abdel Razek",
+    "Rate": "5",
+    "Governorate": "Cairo",
+    "Phone": "1061492838"
+  },
+  {
+    "ID": 30,
+    "Lat": 30.099310331413,
+    "Long": 31.342456985854,
+    "Description": "Bloom Clinic",
+    "Rate": "4.9",
+    "Governorate": "Cairo",
+    "Phone": "1112323330"
+  },
+  {
+    "ID": 31,
+    "Lat": 30.094114184209,
+    "Long": 31.33416434627,
+    "Description": "Psychiatry and Neurology Center",
+    "Rate": "5",
+    "Governorate": "Cairo",
+    "Phone": "1114456518"
+  },
+  {
+    "ID": 32,
+    "Lat": 30.093983787522,
+    "Long": 31.333989192875,
+    "Description": "Dr. Mohamed Mahmoud Hamouda",
+    "Rate": "4.6",
+    "Governorate": "Cairo",
+    "Phone": "-"
+  },
+  {
+    "ID": 33,
+    "Lat": 30.095402680281,
+    "Long": 31.33163845233,
+    "Description": "Dr. Taghreed El Shafei",
+    "Rate": "-",
+    "Governorate": "Cairo",
+    "Phone": "1002074080"
+  },
+  {
+    "ID": 34,
+    "Lat": 30.092529563392,
+    "Long": 31.320305758287,
+    "Description": "Dr. Ahmed Beheiry",
+    "Rate": "4.2",
+    "Governorate": "Cairo",
+    "Phone": "1224126363"
+  },
+  {
+    "ID": 35,
+    "Lat": 30.092088031245,
+    "Long": 31.319492377003,
+    "Description": "Dr. Wael Abu Hindi",
+    "Rate": "4",
+    "Governorate": "Cairo",
+    "Phone": "224526109"
+  },
+  {
+    "ID": 36,
+    "Lat": 30.096690505825,
+    "Long": 31.312721001751,
+    "Description": "Dr. Mahmoud Abdel Rahman",
+    "Rate": "4.2",
+    "Governorate": "Cairo",
+    "Phone": "1006911685"
+  },
+  {
+    "ID": 37,
+    "Lat": 30.03766999055,
+    "Long": 31.23444157406,
+    "Description": "Dr. Ali Shoshan",
+    "Rate": "3.7",
+    "Governorate": "Cairo",
+    "Phone": "1001971952"
+  },
+  {
+    "ID": 38,
+    "Lat": 30.047344250596,
+    "Long": 31.236933262398,
+    "Description": "Shams Center",
+    "Rate": "4.2",
+    "Governorate": "Cairo",
+    "Phone": "1200907001"
+  },
+  {
+    "ID": 39,
+    "Lat": 30.046613340517,
+    "Long": 31.242121090446,
+    "Description": "Dr. Mohamed Ghanem",
+    "Rate": "4.1",
+    "Governorate": "Cairo",
+    "Phone": "223934171"
+  },
+  {
+    "ID": 40,
+    "Lat": 29.957250334334,
+    "Long": 31.275733872788,
+    "Description": "O7 Therapy",
+    "Rate": "4.1",
+    "Governorate": "Cairo",
+    "Phone": "223934171"
+  },
+  {
+    "ID": 41,
+    "Lat": 30.054675941061,
+    "Long": 31.348428442205,
+    "Description": "Dr. Amani Ahmed Abdo",
+    "Rate": "5",
+    "Governorate": "Cairo",
+    "Phone": "226712374"
+  },
+  {
+    "ID": 42,
+    "Lat": 30.079564779523,
+    "Long": 31.342245714846,
+    "Description": "Dr. Abdel Nasser Mahmoud Omar",
+    "Rate": "5",
+    "Governorate": "Cairo",
+    "Phone": "226712374"
+  },
+  {
+    "ID": 43,
+    "Lat": 30.089153428085,
+    "Long": 31.310450788223,
+    "Description": "Dr. Amjad Khairy Kamel ",
+    "Rate": "-",
+    "Governorate": "Cairo",
+    "Phone": "1001582686"
+  },
+  {
+    "ID": 44,
+    "Lat": 30.08926336151,
+    "Long": 31.310330027497,
+    "Description": "Dr. Zainab Alnajjar",
+    "Rate": "4.6",
+    "Governorate": "Cairo",
+    "Phone": "1021457269"
+  },
+  {
+    "ID": 45,
+    "Lat": 30.040671687997,
+    "Long": 31.207976268434,
+    "Description": "Dr. Sally Mohamed Elsheikh",
+    "Rate": "4.2",
+    "Governorate": "Giza",
+    "Phone": "1112923333"
+  },
+  {
+    "ID": 46,
+    "Lat": 30.052310185029,
+    "Long": 31.194888283085,
+    "Description": "Dr. Adly Al-Sheikh",
+    "Rate": "3.2",
+    "Governorate": "Giza",
+    "Phone": "1272535452"
+  },
+  {
+    "ID": 47,
+    "Lat": 30.013717408105,
+    "Long": 31.216857330373,
+    "Description": "Dr. Mohammed Al-Daoushi",
+    "Rate": "4.8",
+    "Governorate": "Giza",
+    "Phone": "1148211620"
+  },
+  {
+    "ID": 48,
+    "Lat": 30.011635328954,
+    "Long": 31.206275500507,
+    "Description": "MSA Clinic Center ",
+    "Rate": "4.6",
+    "Governorate": "Giza",
+    "Phone": "1272922048"
+  },
+  {
+    "ID": 49,
+    "Lat": 29.993919953106,
+    "Long": 31.159653828138,
+    "Description": "Dr. Sarah Elsayed Zaki",
+    "Rate": "4.1",
+    "Governorate": "Giza",
+    "Phone": "1144272872"
+  },
+  {
+    "ID": 50,
+    "Lat": 29.999408952627,
+    "Long": 31.164271952375,
+    "Description": "Dr. David George",
+    "Rate": "4.1",
+    "Governorate": "Giza",
+    "Phone": "1112387123"
+  },
+  {
+    "ID": 51,
+    "Lat": 30.00300770359,
+    "Long": 31.17104303678,
+    "Description": "Dr. Majed Al-Adrousi Jumaa",
+    "Rate": "5",
+    "Governorate": "Giza",
+    "Phone": "1228677388"
+  },
+  {
+    "ID": 52,
+    "Lat": 30.003260572147,
+    "Long": 31.171444055201,
+    "Description": "Dr. Nahla Abdel-Baqi",
+    "Rate": "4.9",
+    "Governorate": "Giza",
+    "Phone": "1063904467"
+  },
+  {
+    "ID": 53,
+    "Lat": 30.003224386598,
+    "Long": 31.173073425304,
+    "Description": "Dr. Omaima Abdel Raouf",
+    "Rate": "4",
+    "Governorate": "Giza",
+    "Phone": "235851727"
+  },
+  {
+    "ID": 54,
+    "Lat": 31.230710593329,
+    "Long": 29.955581615748,
+    "Description": "Dr. Mohamed Saeed",
+    "Rate": "3.1",
+    "Governorate": "Alexandria",
+    "Phone": "1120596171"
+  },
+  {
+    "ID": 55,
+    "Lat": 31.224545947029,
+    "Long": 29.945807525679,
+    "Description": "Dr. Ahmed Kamal",
+    "Rate": "5",
+    "Governorate": "Alexandria",
+    "Phone": "35411956"
+  },
+  {
+    "ID": 56,
+    "Lat": 31.082077524177,
+    "Long": 29.740855581132,
+    "Description": "Virtue Center",
+    "Rate": "2",
+    "Governorate": "Alexandria",
+    "Phone": "1156520418"
+  },
+  {
+    "ID": 57,
+    "Lat": 31.094510053913,
+    "Long": 29.766308733277,
+    "Description": "Be Perfect Center",
+    "Rate": "5",
+    "Governorate": "Alexandria",
+    "Phone": "1004134481"
+  },
+  {
+    "ID": 58,
+    "Lat": 31.213493520675,
+    "Long": 29.92142579172,
+    "Description": "Dr. Shady Sharaf",
+    "Rate": "3.5",
+    "Governorate": "Alexandria",
+    "Phone": "35936353"
+  },
+  {
+    "ID": 59,
+    "Lat": 31.218379670626,
+    "Long": 29.932512611387,
+    "Description": "Be Perfect Center",
+    "Rate": "4.5",
+    "Governorate": "Alexandria",
+    "Phone": "35934303"
+  },
+  {
+    "ID": 60,
+    "Lat": 31.222602322196,
+    "Long": 29.937243374559,
+    "Description": "Dr. Heba Essam Abu Alwafa",
+    "Rate": "3.2",
+    "Governorate": "Alexandria",
+    "Phone": "35432662"
+  },
+  {
+    "ID": 61,
+    "Lat": 31.222174838038,
+    "Long": 29.941944312488,
+    "Description": "Dr. Islam Farid",
+    "Rate": "5",
+    "Governorate": "Alexandria",
+    "Phone": "1001943910"
+  },
+  {
+    "ID": 62,
+    "Lat": 31.22452900361,
+    "Long": 29.945811798694,
+    "Description": "Dr. Ahmed Kamal",
+    "Rate": "5",
+    "Governorate": "Alexandria",
+    "Phone": "35411956"
+  },
+  {
+    "ID": 63,
+    "Lat": 31.230304232074,
+    "Long": 29.950010786773,
+    "Description": "Dr. Ahmed Refaat Dabas",
+    "Rate": "4.7",
+    "Governorate": "Alexandria",
+    "Phone": "35224885"
+  },
+  {
+    "ID": 64,
+    "Lat": 31.239382390927,
+    "Long": 29.959786795219,
+    "Description": " Dr. Mohamed Sherif Salem",
+    "Rate": "3.7",
+    "Governorate": "Alexandria",
+    "Phone": "35854836"
+  },
+  {
+    "ID": 65,
+    "Lat": 31.241126115526,
+    "Long": 29.962236533899,
+    "Description": "Dr. Ahmed Mohamed Abdel Karim",
+    "Rate": "3.7",
+    "Governorate": "Alexandria",
+    "Phone": "1200299665"
+  },
+  {
+    "ID": 66,
+    "Lat": 31.241581998249,
+    "Long": 29.969096306682,
+    "Description": "Dr. Mohamed Abdel Salam",
+    "Rate": "4.8",
+    "Governorate": "Alexandria",
+    "Phone": "1212315757"
+  },
+  {
+    "ID": 67,
+    "Lat": 31.235658642534,
+    "Long": 29.974520726976,
+    "Description": "Be Special Center ",
+    "Rate": "-",
+    "Governorate": "Alexandria",
+    "Phone": "-"
+  },
+  {
+    "ID": 68,
+    "Lat": 31.24702132558,
+    "Long": 29.979329491336,
+    "Description": "Dr. Mohamed Hussein ",
+    "Rate": "4.2",
+    "Governorate": "Alexandria",
+    "Phone": "35750270"
+  },
+  {
+    "ID": 69,
+    "Lat": 31.24775046931,
+    "Long": 29.976582889632,
+    "Description": "Be Perfect Center",
+    "Rate": "4",
+    "Governorate": "Alexandria",
+    "Phone": "35934303"
+  },
+  {
+    "ID": 70,
+    "Lat": 31.240861398451,
+    "Long": 29.995587715234,
+    "Description": "Be Perfect Center",
+    "Rate": "4.6",
+    "Governorate": "Alexandria",
+    "Phone": "35934303"
+  },
+  {
+    "ID": 71,
+    "Lat": 31.242842988491,
+    "Long": 29.995137974454,
+    "Description": "Dr. Maha Salama Al-Hamshari",
+    "Rate": "-",
+    "Governorate": "Alexandria",
+    "Phone": "1002621875"
+  },
+  {
+    "ID": 72,
+    "Lat": 31.266858332094,
+    "Long": 29.999032367487,
+    "Description": "Dr. Hamdy Abdel Mawla",
+    "Rate": "2.5",
+    "Governorate": "Alexandria",
+    "Phone": "35566625"
+  },
+  {
+    "ID": 73,
+    "Lat": 31.259615824406,
+    "Long": 30.027243576443,
+    "Description": "Al Yusr Center",
+    "Rate": "-",
+    "Governorate": "Alexandria",
+    "Phone": "1223289436"
+  },
+  {
+    "ID": 74,
+    "Lat": 31.033315496561,
+    "Long": 30.473901039582,
+    "Description": "Al Ahmad Clinic",
+    "Rate": "-",
+    "Governorate": "Al Buhayrah",
+    "Phone": "1064851108"
+  },
+  {
+    "ID": 75,
+    "Lat": 31.032335410278,
+    "Long": 30.468611815344,
+    "Description": "Dr. Mohamed Farfour",
+    "Rate": "4.4",
+    "Governorate": "Al Buhayrah",
+    "Phone": "-"
+  },
+  {
+    "ID": 76,
+    "Lat": 31.039208523362,
+    "Long": 30.468981152142,
+    "Description": "Dr. Ahmed El-Sawy",
+    "Rate": "4.3",
+    "Governorate": "Al Buhayrah",
+    "Phone": "1019494244"
+  },
+  {
+    "ID": 77,
+    "Lat": 31.041139546561,
+    "Long": 30.467102949949,
+    "Description": "Dr. Mohamed Oqda ",
+    "Rate": "3.9",
+    "Governorate": "Al Buhayrah",
+    "Phone": "453310767"
+  },
+  {
+    "ID": 78,
+    "Lat": 31.03304800249,
+    "Long": 30.467160200113,
+    "Description": "Dr. Osama Abu Al-Majd Al-Khouli",
+    "Rate": "-",
+    "Governorate": "Al Buhayrah",
+    "Phone": "1027244022"
+  },
+  {
+    "ID": 79,
+    "Lat": 31.03732176302,
+    "Long": 30.469407326649,
+    "Description": "Dr. Makram Juwaida",
+    "Rate": "5",
+    "Governorate": "Al Buhayrah",
+    "Phone": "1092412631"
+  },
+  {
+    "ID": 80,
+    "Lat": 31.038535363821,
+    "Long": 30.470003042348,
+    "Description": "Dr. Mohamed Qutb",
+    "Rate": "-",
+    "Governorate": "Al Buhayrah",
+    "Phone": "1040604858"
+  },
+  {
+    "ID": 81,
+    "Lat": 30.764074786374,
+    "Long": 30.691554990559,
+    "Description": "Better Life Center",
+    "Rate": "-",
+    "Governorate": "Al Buhayrah",
+    "Phone": "1033978080"
+  },
+  {
+    "ID": 82,
+    "Lat": 31.042566610857,
+    "Long": 31.3648768484,
+    "Description": "Dr. Maha Barham Ahmed",
+    "Rate": "3.5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1004000894"
+  },
+  {
+    "ID": 83,
+    "Lat": 31.04353213414,
+    "Long": 31.384733311129,
+    "Description": "Dr. Mohamed Metwally Elsayed",
+    "Rate": "3",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1029842957"
+  },
+  {
+    "ID": 84,
+    "Lat": 31.045926196096,
+    "Long": 31.38238138832,
+    "Description": "Dr. Abdullah Elfeki",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1005027493"
+  },
+  {
+    "ID": 85,
+    "Lat": 31.045748439441,
+    "Long": 31.384080122552,
+    "Description": "Dr. Mohamed Adel El Hadidy",
+    "Rate": "4.4",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "502216064"
+  },
+  {
+    "ID": 86,
+    "Lat": 31.045948229964,
+    "Long": 31.387769557835,
+    "Description": "Dr. Mahmoud Alwasifi",
+    "Rate": "4.1",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1091181184"
+  },
+  {
+    "ID": 87,
+    "Lat": 31.046680060944,
+    "Long": 31.388197851814,
+    "Description": "Dr. Mohammed Alwasifi",
+    "Rate": "4.8",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1025071007"
+  },
+  {
+    "ID": 88,
+    "Lat": 31.046393764028,
+    "Long": 31.403533129534,
+    "Description": "Dr. Shaima El-Desouky",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1000298330"
+  },
+  {
+    "ID": 89,
+    "Lat": 31.051177252108,
+    "Long": 31.38030503593,
+    "Description": "Dr. Omar Adel",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1021657811"
+  },
+  {
+    "ID": 90,
+    "Lat": 31.027430748996,
+    "Long": 31.378611492296,
+    "Description": "Al Noor Center",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1001304383"
+  },
+  {
+    "ID": 91,
+    "Lat": 31.033719428223,
+    "Long": 31.368426928144,
+    "Description": "Dr. Mustafa Mahmoud Al-Sabban",
+    "Rate": "-",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1064167322"
+  },
+  {
+    "ID": 92,
+    "Lat": 31.030670223717,
+    "Long": 31.360968300557,
+    "Description": "Dr. Alaa Sobhi",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1012117029"
+  },
+  {
+    "ID": 93,
+    "Lat": 31.035930536982,
+    "Long": 31.357898497303,
+    "Description": "Dr. Ahmed Salah ",
+    "Rate": "3.7",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1212256063"
+  },
+  {
+    "ID": 94,
+    "Lat": 31.041998439367,
+    "Long": 31.36520340096,
+    "Description": "Fitra clinic",
+    "Rate": "4.8",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1002036897"
+  },
+  {
+    "ID": 95,
+    "Lat": 31.045924758589,
+    "Long": 31.387679218025,
+    "Description": "Dr. Shaima Ismail",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1011314202"
+  },
+  {
+    "ID": 96,
+    "Lat": 31.051322041792,
+    "Long": 31.379814391302,
+    "Description": "Dr. Eman Elsayed",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1095898383"
+  },
+  {
+    "ID": 97,
+    "Lat": 31.052041227005,
+    "Long": 31.379085881281,
+    "Description": "Dlala Center",
+    "Rate": "5",
+    "Governorate": "Dakahlia Governorate",
+    "Phone": "1009667858"
+  },
+  {
+    "ID": 98,
+    "Lat": 26.429089569419,
+    "Long": 31.654562599236,
+    "Description": "New Sohag Specialized Center",
+    "Rate": "",
+    "Governorate": "Suhaj",
+    "Phone": ""
+  },
+  {
+    "ID": 99,
+    "Lat": 26.571653667489,
+    "Long": 31.714987397794,
+    "Description": "Specialized Center for Psychiatry and Addiction Treatment",
+    "Rate": "5",
+    "Governorate": "Suhaj",
+    "Phone": "1284502583"
+  },
+  {
+    "ID": 100,
+    "Lat": 26.58147915023,
+    "Long": 31.704001070784,
+    "Description": "Dr Ahmed Sabry Shehab",
+    "Rate": "3.6",
+    "Governorate": "Suhaj",
+    "Phone": "1007779461"
+  },
+  {
+    "ID": 101,
+    "Lat": 26.56674061006,
+    "Long": 31.693014743773,
+    "Description": "Abtal Center for Psychiatry and Addiction",
+    "Rate": "5",
+    "Governorate": "Suhaj",
+    "Phone": ""
+  },
+  {
+    "ID": 102,
+    "Lat": 26.586391575488,
+    "Long": 31.698507907278,
+    "Description": "Communicable diseases hospital",
+    "Rate": "4",
+    "Governorate": "Suhaj",
+    "Phone": ""
+  },
+  {
+    "ID": 103,
+    "Lat": 26.158202442391,
+    "Long": 32.710392913846,
+    "Description": "Neurology and Psychological Department",
+    "Rate": "",
+    "Governorate": "kena",
+    "Phone": ""
+  },
+  {
+    "ID": 104,
+    "Lat": 26.184084984922,
+    "Long": 32.752964931012,
+    "Description": "Erada Hospital for Psychiatry and Addiction Treatment",
+    "Rate": "5",
+    "Governorate": "kena",
+    "Phone": ""
+  },
+  {
+    "ID": 105,
+    "Lat": 26.049065105535,
+    "Long": 32.237213743556,
+    "Description": "Dr. Ahmed Sabry Yaseein",
+    "Rate": "5",
+    "Governorate": "kena",
+    "Phone": "962588894"
+  },
+  {
+    "ID": 106,
+    "Lat": 26.167190550342,
+    "Long": 32.711053416185,
+    "Description": "Dr.Mohammed Muslem El hefny",
+    "Rate": "4.1",
+    "Governorate": "kena",
+    "Phone": "1117227166"
+  },
+  {
+    "ID": 107,
+    "Lat": 26.178282917116,
+    "Long": 32.747445624408,
+    "Description": "Ensan Center for Mental Health and Addiction Treatment",
+    "Rate": "5",
+    "Governorate": "kena",
+    "Phone": "1002670716"
+  },
+  {
+    "ID": 108,
+    "Lat": 25.694275238338,
+    "Long": 32.638126380839,
+    "Description": "Dr.Mohammed Abdullah Abas",
+    "Rate": "4",
+    "Governorate": "Luxor",
+    "Phone": ""
+  },
+  {
+    "ID": 109,
+    "Lat": 25.696131474548,
+    "Long": 32.641902930749,
+    "Description": "Dr.EL Kasem Moussa",
+    "Rate": "5",
+    "Governorate": "Luxor",
+    "Phone": "1067720970"
+  },
+  {
+    "ID": 110,
+    "Lat": 25.730466623395,
+    "Long": 32.643619544344,
+    "Description": "Dr.Amgad Mansour",
+    "Rate": "",
+    "Governorate": "Luxor",
+    "Phone": ""
+  },
+  {
+    "ID": 111,
+    "Lat": 25.58275746465,
+    "Long": 32.531953639935,
+    "Description": "Dr.Mahmmoud Sultan",
+    "Rate": "",
+    "Governorate": "Luxor",
+    "Phone": ""
+  },
+  {
+    "ID": 112,
+    "Lat": 24.100386597602,
+    "Long": 32.902477506522,
+    "Description": "Steb by steb",
+    "Rate": "",
+    "Governorate": "Aswan",
+    "Phone": "1114755446"
+  },
+  {
+    "ID": 113,
+    "Lat": 24.067789289741,
+    "Long": 32.884624725129,
+    "Description": "Dr.Doaa Fathy",
+    "Rate": "5",
+    "Governorate": "Aswan",
+    "Phone": "1223657237"
+  },
+  {
+    "ID": 114,
+    "Lat": 24.121695738156,
+    "Long": 32.903850797398,
+    "Description": "Dr.Mai Refaat",
+    "Rate": "",
+    "Governorate": "Aswan",
+    "Phone": ""
+  },
+  {
+    "ID": 115,
+    "Lat": 24.071550940583,
+    "Long": 32.877758270748,
+    "Description": "Aswan Center for Psychiatry, Addiction Treatment and Rehabilitation",
+    "Rate": "5",
+    "Governorate": "Aswan",
+    "Phone": "1144172910"
+  },
+  {
+    "ID": 116,
+    "Lat": 23.982495641786,
+    "Long": 32.896984343016,
+    "Description": "El Takamul Psychiatric Hospital Aswan",
+    "Rate": "5",
+    "Governorate": "Aswan",
+    "Phone": ""
+  },
+  {
+    "ID": 117,
+    "Lat": 27.208335484383,
+    "Long": 33.821464337091,
+    "Description": "Dr mena Goubran",
+    "Rate": "",
+    "Governorate": "Red Sea",
+    "Phone": "653580011"
+  },
+  {
+    "ID": 118,
+    "Lat": 31.021241873557,
+    "Long": 33.018475947122,
+    "Description": "Sheikh Abdul Rahman Abdullah",
+    "Rate": "4",
+    "Governorate": "North Sinai",
+    "Phone": ""
+  },
+  {
+    "ID": 119,
+    "Lat": 31.011702090559,
+    "Long": 33.003865814426,
+    "Description": "Othman bin Affan Specialized Clinics",
+    "Rate": "4",
+    "Governorate": "North Sinai",
+    "Phone": "1014107285"
+  },
+  {
+    "ID": 120,
+    "Lat": 31.420798545388,
+    "Long": 31.8113411,
+    "Description": "Dr. Amjad Ibrahim",
+    "Rate": "",
+    "Governorate": "Damietta",
+    "Phone": "1140526294"
+  },
+  {
+    "ID": 121,
+    "Lat": 31.445405506142,
+    "Long": 31.67744524,
+    "Description": "Dr. Ayman Al-Hassi",
+    "Rate": "5",
+    "Governorate": "Damietta",
+    "Phone": "1017957176"
+  },
+  {
+    "ID": 122,
+    "Lat": 31.415899924207,
+    "Long": 31.80859341,
+    "Description": "Dr. Amjad Ibrahim",
+    "Rate": "",
+    "Governorate": "Damietta",
+    "Phone": "1140526294"
+  },
+  {
+    "ID": 123,
+    "Lat": 31.449881041516,
+    "Long": 31.67950406,
+    "Description": "Ataa Complex",
+    "Rate": "",
+    "Governorate": "Damietta",
+    "Phone": "1093079887"
+  },
+  {
+    "ID": 124,
+    "Lat": 31.43699310223,
+    "Long": 31.6589047,
+    "Description": "Ataa Center",
+    "Rate": "",
+    "Governorate": "Damietta",
+    "Phone": ""
+  },
+  {
+    "ID": 125,
+    "Lat": 31.432281872933,
+    "Long": 31.80412053,
+    "Description": "Sawa Clinics",
+    "Rate": "",
+    "Governorate": "Damietta",
+    "Phone": "1284016886"
+  },
+  {
+    "ID": 126,
+    "Lat": 31.402983039178,
+    "Long": 31.72858953,
+    "Description": "Al Amal Hospital",
+    "Rate": "4.3",
+    "Governorate": "Damietta",
+    "Phone": "1000790702"
+  },
+  {
+    "ID": 127,
+    "Lat": 31.445572887904,
+    "Long": 31.63548615,
+    "Description": "zat Center",
+    "Rate": "4.3",
+    "Governorate": "Damietta",
+    "Phone": "1024267766"
+  },
+  {
+    "ID": 128,
+    "Lat": 31.444401276436,
+    "Long": 31.64509919,
+    "Description": "Step by Step",
+    "Rate": "3",
+    "Governorate": "Damietta",
+    "Phone": ""
+  },
+  {
+    "ID": 129,
+    "Lat": 31.26367961296,
+    "Long": 32.30677382,
+    "Description": "Dr. Hany Montaser",
+    "Rate": "4.3",
+    "Governorate": "port Said",
+    "Phone": "663235430"
+  },
+  {
+    "ID": 130,
+    "Lat": 31.260561842006,
+    "Long": 32.25956423,
+    "Description": "Dr. Esraa Mostafa Kenawy",
+    "Rate": "5",
+    "Governorate": "port Said",
+    "Phone": ""
+  },
+  {
+    "ID": 131,
+    "Lat": 31.26417957667,
+    "Long": 32.30303038,
+    "Description": "Dr. Tamer El-Masry",
+    "Rate": "",
+    "Governorate": "port Said",
+    "Phone": "1275716696"
+  },
+  {
+    "ID": 132,
+    "Lat": 31.266674009845,
+    "Long": 32.31187094,
+    "Description": "Coach Ghada Aqeel",
+    "Rate": "",
+    "Governorate": "port Said",
+    "Phone": "1018646460"
+  },
+  {
+    "ID": 133,
+    "Lat": 31.253371047221,
+    "Long": 32.26193223,
+    "Description": "Port-Said Mental Health Hospital",
+    "Rate": "4.2",
+    "Governorate": "port Said",
+    "Phone": "663670455"
+  },
+  {
+    "ID": 134,
+    "Lat": 31.269975871441,
+    "Long": 32.31104017,
+    "Description": "Port Said Foundation for Self Guidance",
+    "Rate": "",
+    "Governorate": "port Said",
+    "Phone": ""
+  },
+  {
+    "ID": 135,
+    "Lat": 30.614413502509,
+    "Long": 32.30070961,
+    "Description": "Dr/Heidi Hassan",
+    "Rate": "5",
+    "Governorate": "Isma3lia",
+    "Phone": "1206950150"
+  },
+  {
+    "ID": 136,
+    "Lat": 30.617146546113,
+    "Long": 32.28191269,
+    "Description": "Dr/Mahmoud Al-Smarai",
+    "Rate": "",
+    "Governorate": "Isma3lia",
+    "Phone": ""
+  },
+  {
+    "ID": 137,
+    "Lat": 30.62128289779,
+    "Long": 32.29049576,
+    "Description": "Dr/Khalid Abdul Moaz",
+    "Rate": "",
+    "Governorate": "Isma3lia",
+    "Phone": ""
+  },
+  {
+    "ID": 138,
+    "Lat": 30.589094577452,
+    "Long": 32.26461806,
+    "Description": "Dr. Mohamed Hammad",
+    "Rate": "5",
+    "Governorate": "Isma3lia",
+    "Phone": "1146497897"
+  },
+  {
+    "ID": 139,
+    "Lat": 30.593897074074,
+    "Long": 32.27629103,
+    "Description": "Dr.Shaimaa Mohammed Saed",
+    "Rate": "",
+    "Governorate": "Isma3lia",
+    "Phone": "1021903024"
+  },
+  {
+    "ID": 140,
+    "Lat": 30.610457413344,
+    "Long": 32.26256674,
+    "Description": "kareem Hospital",
+    "Rate": "",
+    "Governorate": "Isma3lia",
+    "Phone": ""
+  },
+  {
+    "ID": 141,
+    "Lat": 30.617179359465,
+    "Long": 32.2660858,
+    "Description": "Flow1",
+    "Rate": "5",
+    "Governorate": "Isma3lia",
+    "Phone": "1143869004"
+  },
+  {
+    "ID": 142,
+    "Lat": 30.592726965822,
+    "Long": 32.27887457,
+    "Description": "Flow2",
+    "Rate": "",
+    "Governorate": "Isma3lia",
+    "Phone": "1143869004"
+  },
+  {
+    "ID": 143,
+    "Lat": 30.657660237007,
+    "Long": 31.51932347,
+    "Description": "Dr.Mohammed Abd EL ghany",
+    "Rate": "4.6",
+    "Governorate": "AL  Sharqia",
+    "Phone": "552332208"
+  },
+  {
+    "ID": 144,
+    "Lat": 30.65057190616,
+    "Long": 31.5303098,
+    "Description": "Mental health doctor",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1013352406"
+  },
+  {
+    "ID": 145,
+    "Lat": 30.638756866564,
+    "Long": 31.49185766,
+    "Description": "Dr.Wael Abo Hendy",
+    "Rate": "4",
+    "Governorate": "AL  Sharqia",
+    "Phone": "552363296"
+  },
+  {
+    "ID": 146,
+    "Lat": 30.624576913945,
+    "Long": 31.48636449,
+    "Description": "Dr.Ahmed Abdelkader",
+    "Rate": "4",
+    "Governorate": "AL  Sharqia",
+    "Phone": "552363296"
+  },
+  {
+    "ID": 147,
+    "Lat": 30.634030446588,
+    "Long": 31.50284398,
+    "Description": "Dr.Gamal Negm",
+    "Rate": "4.8",
+    "Governorate": "AL  Sharqia",
+    "Phone": "552335777"
+  },
+  {
+    "ID": 148,
+    "Lat": 30.626940383686,
+    "Long": 31.46164526,
+    "Description": "Abdelrahman El Hawy",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": ""
+  },
+  {
+    "ID": 149,
+    "Lat": 30.591482278627,
+    "Long": 31.49185766,
+    "Description": "Dr. Ayman El hadad",
+    "Rate": "",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1128528211"
+  },
+  {
+    "ID": 150,
+    "Lat": 30.60803100987,
+    "Long": 31.49185766,
+    "Description": "Dr. Mohammed Gad",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1111040772"
+  },
+  {
+    "ID": 151,
+    "Lat": 30.759202494651,
+    "Long": 31.45889867,
+    "Description": "Gad Center",
+    "Rate": "",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1111040772"
+  },
+  {
+    "ID": 152,
+    "Lat": 30.598574938143,
+    "Long": 31.48636449,
+    "Description": "Dr.Mohammed Samy Youness",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1002306868"
+  },
+  {
+    "ID": 153,
+    "Lat": 30.745040225718,
+    "Long": 31.7253171,
+    "Description": "Dr. Mohammed Elsayed EL baghdady",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1095272864"
+  },
+  {
+    "ID": 154,
+    "Lat": 30.577295402333,
+    "Long": 31.49460424,
+    "Description": "Dr. Nelli Raafat Abd Elfattah",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1275522944"
+  },
+  {
+    "ID": 155,
+    "Lat": 30.297865690487,
+    "Long": 31.7417966,
+    "Description": "Dr. Amr Abd El Azez",
+    "Rate": "3.7",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1021200480"
+  },
+  {
+    "ID": 156,
+    "Lat": 30.75684226114,
+    "Long": 31.45615209,
+    "Description": "Dr.Mohammed Gamal Negm",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1200075830"
+  },
+  {
+    "ID": 157,
+    "Lat": 30.423471303804,
+    "Long": 31.55502904,
+    "Description": "Dr.Eman Fath",
+    "Rate": "",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1121777468"
+  },
+  {
+    "ID": 158,
+    "Lat": 30.544184619102,
+    "Long": 31.65939914,
+    "Description": "the Center of Will",
+    "Rate": "",
+    "Governorate": "AL  Sharqia",
+    "Phone": ""
+  },
+  {
+    "ID": 159,
+    "Lat": 30.61275869956,
+    "Long": 31.45340551,
+    "Description": "AL-Dar Hospital",
+    "Rate": "3.5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1065540884"
+  },
+  {
+    "ID": 160,
+    "Lat": 30.593846556148,
+    "Long": 31.49185766,
+    "Description": "Dr.Mona Gad",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1014958333"
+  },
+  {
+    "ID": 161,
+    "Lat": 30.288379479894,
+    "Long": 31.74454318,
+    "Description": "Gad Center2",
+    "Rate": "5",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1204470039"
+  },
+  {
+    "ID": 162,
+    "Lat": 30.34054228734,
+    "Long": 31.76376925,
+    "Description": "Dr.Ayman Asaad Tawfeiq",
+    "Rate": "1",
+    "Governorate": "AL  Sharqia",
+    "Phone": "1030346377"
+  },
+  {
+    "ID": 163,
+    "Lat": 29.313163207507,
+    "Long": 30.85244154,
+    "Description": "Dr.Mohammed Salah El gendy",
+    "Rate": "4.3",
+    "Governorate": "AL fayoum",
+    "Phone": "1005396843"
+  },
+  {
+    "ID": 164,
+    "Lat": 29.317354197982,
+    "Long": 30.85518812,
+    "Description": "Psychiatrist  for bna Omran",
+    "Rate": "5",
+    "Governorate": "AL fayoum",
+    "Phone": "1021061451"
+  },
+  {
+    "ID": 165,
+    "Lat": 29.307774538256,
+    "Long": 30.83321547,
+    "Description": "Dr.Mohammed Salah",
+    "Rate": "5",
+    "Governorate": "AL fayoum",
+    "Phone": "1007002934"
+  },
+  {
+    "ID": 166,
+    "Lat": 29.315558080285,
+    "Long": 30.85106825,
+    "Description": "Dr.Marwa Kamal",
+    "Rate": "",
+    "Governorate": "AL fayoum",
+    "Phone": "1020059796"
+  },
+  {
+    "ID": 167,
+    "Lat": 29.289211388859,
+    "Long": 30.83939528,
+    "Description": "Freedom Center",
+    "Rate": "5",
+    "Governorate": "AL fayoum",
+    "Phone": "1277455552"
+  },
+  {
+    "ID": 168,
+    "Lat": 29.077061514957,
+    "Long": 31.09866396,
+    "Description": "Dr.Hoda Essam",
+    "Rate": "",
+    "Governorate": "bani Sueif",
+    "Phone": "1273345043"
+  },
+  {
+    "ID": 169,
+    "Lat": 29.062657978735,
+    "Long": 31.10415713,
+    "Description": "Benisuef Mental Health Hospital",
+    "Rate": "3.7",
+    "Governorate": "bani Sueif",
+    "Phone": "822133640"
+  },
+  {
+    "ID": 170,
+    "Lat": 29.074661065374,
+    "Long": 31.10415713,
+    "Description": "Dr.Mera Foad",
+    "Rate": "4.1",
+    "Governorate": "bani Sueif",
+    "Phone": "1220012486"
+  },
+  {
+    "ID": 171,
+    "Lat": 29.079461908618,
+    "Long": 31.09042422,
+    "Description": "Dr.Hani Montaser",
+    "Rate": "5",
+    "Governorate": "bani Sueif",
+    "Phone": "1115026508"
+  },
+  {
+    "ID": 172,
+    "Lat": 28.985805144452,
+    "Long": 30.8514716,
+    "Description": "Dr.Sobh",
+    "Rate": "",
+    "Governorate": "bani Sueif",
+    "Phone": ""
+  },
+  {
+    "ID": 173,
+    "Lat": 29.079461908618,
+    "Long": 31.09042422,
+    "Description": "El Talawy Center",
+    "Rate": "5",
+    "Governorate": "bani Sueif",
+    "Phone": "1002366063"
+  },
+  {
+    "ID": 174,
+    "Lat": 28.932935663472,
+    "Long": 30.97506778,
+    "Description": "Dr. Hoda Kamel Wasef",
+    "Rate": "",
+    "Governorate": "bani Sueif",
+    "Phone": "822324848"
+  },
+  {
+    "ID": 175,
+    "Lat": 29.062657978735,
+    "Long": 31.1233832,
+    "Description": "Aman Center",
+    "Rate": "5",
+    "Governorate": "bani Sueif",
+    "Phone": "822073997"
+  },
+  {
+    "ID": 176,
+    "Lat": 29.086662754042,
+    "Long": 31.09042422,
+    "Description": "Dr. Mostafa Fekry Tantawy",
+    "Rate": "4.2",
+    "Governorate": "bani Sueif",
+    "Phone": "225983900"
+  },
+  {
+    "ID": 177,
+    "Lat": 29.079461908618,
+    "Long": 31.13162294,
+    "Description": "Hedaya Center",
+    "Rate": "4",
+    "Governorate": "bani Sueif",
+    "Phone": ""
+  },
+  {
+    "ID": 178,
+    "Lat": 29.065058707883,
+    "Long": 31.09866396,
+    "Description": "Mental health Hospital",
+    "Rate": "4",
+    "Governorate": "bani Sueif",
+    "Phone": ""
+  },
+  {
+    "ID": 179,
+    "Lat": 28.098943198957,
+    "Long": 30.73137741,
+    "Description": "Dr.Bassem Sameer Mekhaeel",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1095840988"
+  },
+  {
+    "ID": 180,
+    "Lat": 28.098943198957,
+    "Long": 30.79729537,
+    "Description": "Dr.Mohammed Khalaf",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1064059898"
+  },
+  {
+    "ID": 181,
+    "Lat": 28.118324309089,
+    "Long": 30.73137741,
+    "Description": "Dr.Gowaireia Shehata",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": ""
+  },
+  {
+    "ID": 182,
+    "Lat": 28.128013550778,
+    "Long": 30.76433639,
+    "Description": "Dr Nermin Aly Hamdy Clinic",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1123090900"
+  },
+  {
+    "ID": 183,
+    "Lat": 28.08925133091,
+    "Long": 30.75335006,
+    "Description": "Al Ershad Center",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": ""
+  },
+  {
+    "ID": 184,
+    "Lat": 28.495553932425,
+    "Long": 30.81926802,
+    "Description": "Dr Maged Lamie",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": "1006211172"
+  },
+  {
+    "ID": 185,
+    "Lat": 27.632749923239,
+    "Long": 30.86321333,
+    "Description": "Dr.Nour Mustafa",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": "1064052752"
+  },
+  {
+    "ID": 186,
+    "Lat": 28.118324309089,
+    "Long": 30.74236373,
+    "Description": "Tanweer Clinic For mental health",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1068499838"
+  },
+  {
+    "ID": 187,
+    "Lat": 28.688484613327,
+    "Long": 30.67644577,
+    "Description": "Salem Abd Elsayed",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": ""
+  },
+  {
+    "ID": 188,
+    "Lat": 27.934062569615,
+    "Long": 30.77532271,
+    "Description": "Mental Health Center",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": ""
+  },
+  {
+    "ID": 189,
+    "Lat": 28.10863419175,
+    "Long": 30.8082817,
+    "Description": "El Hayah Hospital",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1013118775"
+  },
+  {
+    "ID": 190,
+    "Lat": 28.08925133091,
+    "Long": 30.83025435,
+    "Description": "Menia Mental Health Hospital",
+    "Rate": "4",
+    "Governorate": "AL Minya",
+    "Phone": ""
+  },
+  {
+    "ID": 191,
+    "Lat": 28.08925133091,
+    "Long": 30.74236373,
+    "Description": "Aldewan Hospital",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1093326260"
+  },
+  {
+    "ID": 192,
+    "Lat": 28.418282646008,
+    "Long": 30.74236373,
+    "Description": "AL Ekhtiar Hospital",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1148339203"
+  },
+  {
+    "ID": 193,
+    "Lat": 28.079558593458,
+    "Long": 30.77532271,
+    "Description": "Al Amal Psychiatric Hospital",
+    "Rate": "4.5",
+    "Governorate": "AL Minya",
+    "Phone": "862295026"
+  },
+  {
+    "ID": 194,
+    "Lat": 28.039188134907,
+    "Long": 30.76734993,
+    "Description": "El Menia Psychiatric Hospital",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "862200416"
+  },
+  {
+    "ID": 195,
+    "Lat": 28.312038186623,
+    "Long": 30.7123999,
+    "Description": "Dr.Mohammed Ayman",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": ""
+  },
+  {
+    "ID": 196,
+    "Lat": 27.742289923115,
+    "Long": 30.84698241,
+    "Description": "Dr.Boshra Naseef",
+    "Rate": "5",
+    "Governorate": "AL Minya",
+    "Phone": "1287553565"
+  },
+  {
+    "ID": 197,
+    "Lat": 26.915896625753,
+    "Long": 30.87683738,
+    "Description": "Dr.Mohammed Radi",
+    "Rate": "",
+    "Governorate": "AL Minya",
+    "Phone": "1113644840"
+  },
+  {
+    "ID": 198,
+    "Lat": 28.069884990817,
+    "Long": 30.77053902,
+    "Description": "Albedaya Hospital",
+    "Rate": "5",
+    "Governorate": "Assiut",
+    "Phone": "1033536226"
+  },
+  {
+    "ID": 199,
+    "Lat": 27.18563778209,
+    "Long": 31.1922073,
+    "Description": "Dr.Mohammed Fawzy",
+    "Rate": "3",
+    "Governorate": "Assiut",
+    "Phone": "1014363839"
+  },
+  {
+    "ID": 200,
+    "Lat": 27.196631503504,
+    "Long": 31.18534085,
+    "Description": "Hekayat Clinics",
+    "Rate": "4",
+    "Governorate": "Assiut",
+    "Phone": "1061060275"
+  },
+  {
+    "ID": 201,
+    "Lat": 27.181972967483,
+    "Long": 31.18808743,
+    "Description": "Dr.Hasan Abd EL razeq Hassan",
+    "Rate": "",
+    "Governorate": "Assiut",
+    "Phone": "882366888"
+  },
+  {
+    "ID": 202,
+    "Lat": 27.186859360205,
+    "Long": 31.19495388,
+    "Description": "Tawasol Clinic",
+    "Rate": "",
+    "Governorate": "Assiut",
+    "Phone": "1025104436"
+  },
+  {
+    "ID": 203,
+    "Lat": 27.178308032494,
+    "Long": 31.18534085,
+    "Description": "Dr.Hamdy Nageib",
+    "Rate": "5",
+    "Governorate": "Assiut",
+    "Phone": "1120018922"
+  },
+  {
+    "ID": 204,
+    "Lat": 27.179529690866,
+    "Long": 31.18396756,
+    "Description": "Dr. Alaa Darweish",
+    "Rate": "5",
+    "Governorate": "Assiut",
+    "Phone": ""
+  },
+  {
+    "ID": 205,
+    "Lat": 27.19907440553,
+    "Long": 31.17298123,
+    "Description": "Al Fayrouz Hospital",
+    "Rate": "5",
+    "Governorate": "Assiut",
+    "Phone": "1067221078"
+  },
+  {
+    "ID": 206,
+    "Lat": 27.20029583647,
+    "Long": 31.17435452,
+    "Description": "Doctor Ahmed Attahla",
+    "Rate": "5",
+    "Governorate": "Assiut",
+    "Phone": "1061060275"
+  },
+  {
+    "ID": 207,
+    "Lat": 27.17830803342,
+    "Long": 31.18122098,
+    "Description": "Dr. Essam Saad Darwish",
+    "Rate": "4.8",
+    "Governorate": "Assiut",
+    "Phone": "882338464"
+  },
+  {
+    "ID": 208,
+    "Lat": 27.191745539814,
+    "Long": 31.18396756,
+    "Description": "Support Clinics",
+    "Rate": "5",
+    "Governorate": "Assiut",
+    "Phone": "1559474311"
+  },
+  {
+    "ID": 209,
+    "Lat": 27.438429602026,
+    "Long": 30.82352982,
+    "Description": "Kalimat Center",
+    "Rate": "5",
+    "Governorate": "Suhaj",
+    "Phone": "1012926295"
+  },
+  {
+    "ID": 210,
+    "Lat": 26.552000170904,
+    "Long": 31.68202842,
+    "Description": "Doctor Saber Haddad Mahdi",
+    "Rate": "4.9",
+    "Governorate": "Suhaj",
+    "Phone": "1555812809"
+  },
+  {
+    "ID": 211,
+    "Lat": 26.537257839414,
+    "Long": 31.68202842,
+    "Description": "Dr. Ahmed Fawzi Qasim",
+    "Rate": "4",
+    "Governorate": "Suhaj",
+    "Phone": "932133324"
+  },
+  {
+    "ID": 212,
+    "Lat": 26.561827339001,
+    "Long": 31.69301474,
+    "Description": "Doctor Mahmoud Abd Ella Tantawi",
+    "Rate": "5",
+    "Governorate": "Suhaj",
+    "Phone": "1212673187"
+  },
+  {
+    "ID": 213,
+    "Lat": 26.782715457302,
+    "Long": 31.48976769,
+    "Description": "Doctor Mahmoud Hegazy",
+    "Rate": "5",
+    "Governorate": "Suhaj",
+    "Phone": "1207280548"
+  },
+  {
+    "ID": 214,
+    "Lat": 26.571653664529,
+    "Long": 31.68752158,
+    "Description": "Aldar Center",
+    "Rate": "",
+    "Governorate": "Suhaj",
+    "Phone": ""
+  },
+  {
+    "ID": 215,
+    "Lat": 26.782715460257,
+    "Long": 31.50075402,
+    "Description": "Doctor Hossam Kawkab",
+    "Rate": "4",
+    "Governorate": "Suhaj",
+    "Phone": "1148066630"
+  },
+  {
+    "ID": 216,
+    "Lat": 26.561827341962,
+    "Long": 31.69301474,
+    "Description": "Dr. Ahmed Fawzi Qasim",
+    "Rate": "5",
+    "Governorate": "Suhaj",
+    "Phone": "1006717199"
+  },
+  {
+    "ID": 217,
+    "Lat": 26.787619221512,
+    "Long": 31.48976769,
+    "Description": "Dr. Andrew Refaat Naguib",
+    "Rate": "5",
+    "Governorate": "Suhaj",
+    "Phone": "1557521443"
+  },
+  {
+    "ID": 218,
+    "Lat": 26.365124180932,
+    "Long": 31.86330281,
+    "Description": "Dr.Tawfeiq Mohammed Tawfeiq",
+    "Rate": "4.6",
+    "Governorate": "",
+    "Phone": "934676667"
+  }
+]

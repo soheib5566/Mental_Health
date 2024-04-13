@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('gover');
-            $table->double('rate');
+            $table->string('rate');
             $table->timestamps();
         });
     }

@@ -23,7 +23,6 @@ class DoctorsImport implements ToModel
             'Rate' => $row['Rate'],
             'Governorate' => $row['Governorate'],
             'Phone' => $row['Phone'],
-            'created_at' => now(),
         ]);
     }
 }
