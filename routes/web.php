@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/admindash', [admincontroller::class, 'admindash']);
+Route::get('/admindashboard', [admincontroller::class, 'admindash']);
 
 Route::get('/doctors', [admincontroller::class, 'getdoctorspg']);
 
