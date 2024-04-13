@@ -21,9 +21,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/admindashboard', [admincontroller::class, 'admindash']);
+Route::get('/admindash', [AdminController::class, 'admindash']);
 
-Route::get('/doctors', [admincontroller::class, 'getdoctorspg']);
+Route::get('/doctors', [AdminController::class, 'getdoctorspg']);
 
 Route::delete('admindash/{id}', [UserController::class, 'Destroy']);
 
