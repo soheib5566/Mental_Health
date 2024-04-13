@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\admincontroller;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DoctorController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
