@@ -53,7 +53,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::put('/user/update_profile', [UserController::class, 'put_user']);
 
-    Route::get('/users/{user:name}', [UserController::class, 'show']);
+    Route::get('/users/{id}', [UserController::class, 'show']);
     //Doctors Route
 
     Route::get('/doctors', [DoctorController::class, 'index']);

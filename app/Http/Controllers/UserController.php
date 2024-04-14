@@ -85,7 +85,10 @@ class UserController extends Controller
             'email' => 'required',
             'password' => 'required'
         ]);
+
+
         $user = User::where('email', $keys['email'])->first();
+
 
 
         if (auth()->attempt($keys) && password_verify($request->password, $user->password)) {
@@ -152,7 +155,7 @@ class UserController extends Controller
         // dd($attributes);
 
         $user = User::findOrFail($attributes['id']);
-
+        $user->name = $attributes['name'];
         $user->phone = $attributes['phone'];
         $user->gender = $attributes['gender'];
         $user->DOB = $attributes['DOB'];
@@ -166,7 +169,7 @@ class UserController extends Controller
         }
         $user->save();
 
-        // return response()->json(['message' => 'User Profile Updated']);
-        return response($fullPath);
+        return response()->json(['message' => 'User Profile Updated']);
+        // return response($fullPath);
     }
 }

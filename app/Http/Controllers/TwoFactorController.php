@@ -25,13 +25,14 @@ class TwoFactorController extends Controller
 
 
         $user = User::findOrFail($request->id);
+        if ($user->expires_at < now()) {
+            return response()->json(['Message' => 'OTP expired']);
+        }
+
         if ($user->code != $request->otp) {
             return response()->json(['Message' => 'Invalid OTP']);
         }
 
-        if ($user->expires_at < now()) {
-            return response()->json(['Message' => 'OTP expired']);
-        }
 
         if ($user->code) {
             $user->reset_code();
