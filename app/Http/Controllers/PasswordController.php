@@ -22,7 +22,7 @@ class PasswordController extends Controller
         try {
             $user = User::where('email', $request->email)->firstOrFail();
         } catch (ModelNotFoundException) {
-            return response()->json(['message' => 'Email Not Exist']);
+            return response()->json(['message' => 'Email Not Exist'], 404);
         }
 
 

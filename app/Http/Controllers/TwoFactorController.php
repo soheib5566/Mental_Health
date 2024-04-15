@@ -20,7 +20,8 @@ class TwoFactorController extends Controller
             'id' => 'required|exists:users,id',
             [
                 'otp.required' => 'OTP Fields are required',
-                'otp.digits' => 'OTP Code must have 4 Digits'
+                'otp.digits' => 'OTP Code must have 4 Digits',
+                'id.exists' => 'The selected id is invalid.'
             ]
         ]);
 
@@ -32,6 +33,9 @@ class TwoFactorController extends Controller
 
         $minutesDifference = now()->diffInMinutes($expiresDate);
 
+        if (!$user->code) {
+            return response()->json(['Message' => 'Email is Already activited'], 200);
+        }
 
         if ($minutesDifference > 5) {
             return response()->json(['Message' => 'OTP expired'], 422);
@@ -45,6 +49,7 @@ class TwoFactorController extends Controller
         if ($user->code) {
             $user->reset_code();
         }
+
 
 
         $token = $user->createToken($user->name)->plainTextToken;

@@ -64,7 +64,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::middleware('api')->post('/store_task', [TaskController::class, 'store']);
 
-    Route::middleware('api')->post('/tskcompleted/{id}', [TaskController::class, 'completed']);
+    Route::middleware('api')->post('/tskcompleted', [TaskController::class, 'completed']);
 
     Route::middleware('api')->get('/tasks/{id}', [TaskController::class, 'index']);
 

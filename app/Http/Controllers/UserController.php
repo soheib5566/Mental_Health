@@ -15,6 +15,7 @@ use Illuminate\Validation\ValidationException;
 use Laravel\Sanctum\PersonalAccessToken;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class UserController extends Controller
 {
@@ -43,7 +44,7 @@ class UserController extends Controller
 
         $attributes['password'] = bcrypt($attributes['password']);
 
-        $attributes['image'] = public_path('image\icon_profile');
+        $attributes['image'] = 'image/icon_profile.jpg';
 
         $user = User::create($attributes);
         $user->generete_code();
@@ -67,8 +68,10 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
+        // dd(public_path($user->image));
+        // dd(File::exists(public_path($user->image)));
 
-        if (Storage::exists('public/' . $user->image)) {
+        if (File::exists(public_path($user->image))) {
 
 
             // Return the image file in the response
@@ -90,6 +93,9 @@ class UserController extends Controller
         $user = User::where('email', $keys['email'])->first();
 
 
+        if ($user->code) {
+            return response()->json(['Message' => 'Email is not activated'], 422);
+        }
 
         if (auth()->attempt($keys) && password_verify($request->password, $user->password)) {
             $token = $user->createToken($user->name)->plainTextToken;
@@ -161,6 +167,13 @@ class UserController extends Controller
         $user->DOB = $attributes['DOB'];
 
         if ($request->hasFile('image')) {
+            $oldimage = $user->image;
+            // dd(File::exists(public_path($oldimage)));
+            if ($oldimage && File::exists(public_path($oldimage)) && $oldimage != 'image/icon_profile.jpg') {
+                File::delete(public_path($oldimage));
+            }
+
+
             $imagepath = $request->file('image')->store('public/image');
             $relativePath = str_replace('public/', '', $imagepath);
             $fullPath = public_path($relativePath);
@@ -169,7 +182,7 @@ class UserController extends Controller
         }
         $user->save();
 
-        return response()->json(['message' => 'User Profile Updated']);
+        return response()->json(['message' => 'User Profile Updated', 'name' => $user->name, 'phone' => $user->phone, 'gender' => $user->gender, 'DOB' => $user->DOB, 'image' => url($user->image)]);
         // return response($fullPath);
     }
 }
