@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Iluminate\Support\Facades\Session;
+use Carbon\Carbon;
 
 class TwoFactorController extends Controller
 {
@@ -25,7 +26,14 @@ class TwoFactorController extends Controller
 
 
         $user = User::findOrFail($request->id);
-        if ($user->expires_at < now()) {
+
+        $expiresDate = Carbon::parse($user->expires_at);
+
+
+        $minutesDifference = now()->diffInMinutes($expiresDate);
+
+
+        if ($minutesDifference > 5) {
             return response()->json(['Message' => 'OTP expired'], 422);
         }
 
