@@ -68,8 +68,6 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        // dd(public_path($user->image));
-        // dd(File::exists(public_path($user->image)));
 
         if (File::exists(public_path($user->image))) {
 
@@ -145,7 +143,7 @@ class UserController extends Controller
         $attributes = $request->validate([
             'id' => 'nullable|exists:users,id',
             'name' => 'nullable|string',
-            'phone' => 'nullable|string|unique:users,phone,except,id|min:11',
+            'phone' => 'nullable|string|unique:users,phone|min:11',
             'gender' => 'nullable|string',
             'DOB' => 'nullable|date|date_format:Y/m/d',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
