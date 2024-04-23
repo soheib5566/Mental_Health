@@ -16,6 +16,7 @@ use Laravel\Sanctum\PersonalAccessToken;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class UserController extends Controller
 {
@@ -43,8 +44,9 @@ class UserController extends Controller
 
 
         $attributes['password'] = bcrypt($attributes['password']);
+        $public_id = 'profile/icon_profile';
 
-        $attributes['image'] = 'image/icon_profile.jpg';
+        $attributes['image'] = 'profile/icon_profile';
 
         $user = User::create($attributes);
         $user->generete_code();
@@ -68,12 +70,17 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
+        $imageUrl = Cloudinary::getUrl($user->image);
 
-        if (File::exists(public_path($user->image))) {
+        // Check if the image exists on Cloudinary
+        $headers = get_headers($imageUrl);
+        $exists = strpos($headers[0], '200');
+
+        if ($exists) {
 
 
             // Return the image file in the response
-            return response(['name' => $user->name, 'phone' => $user->phone, 'gender' => $user->gender, 'DOB' => $user->DOB, 'image' => url($user->image)]);
+            return response(['name' => $user->name, 'phone' => $user->phone, 'gender' => $user->gender, 'DOB' => $user->DOB, 'image' => $imageUrl]);
         } else {
             // Return a response indicating that the file doesn't exist
             return response()->json(['message' => 'Image not found'], 404);
@@ -156,8 +163,6 @@ class UserController extends Controller
             'id.required' => 'ID Not exist.',
         ]);
 
-        // dd($attributes);
-
         $user = User::findOrFail($attributes['id']);
         $user->name = $attributes['name'];
         $user->phone = $attributes['phone'];
@@ -166,21 +171,24 @@ class UserController extends Controller
 
         if ($request->hasFile('image')) {
             $oldimage = $user->image;
-            // dd(File::exists(public_path($oldimage)));
-            if ($oldimage && File::exists(public_path($oldimage)) && $oldimage != 'image/icon_profile.jpg') {
-                File::delete(public_path($oldimage));
+            $url = Cloudinary::getUrl($oldimage);
+
+            if ($oldimage && $url != null && $oldimage != 'profile/icon_profile') {
+                Cloudinary::destroy($oldimage);
             }
+            $id_name = str_replace(' ', '_', $user->name);
 
 
-            $imagepath = $request->file('image')->store('public/image');
-            $relativePath = str_replace('public/', '', $imagepath);
-            $fullPath = public_path($relativePath);
-            $request->file('image')->move(dirname($fullPath), basename($fullPath));
-            $user->image = $relativePath;
+            $newimage = Cloudinary::uploadApi()->upload($request->file('image')->getRealPath(), [
+                'folder' => 'profile',
+                'resource_type' => 'auto',
+                'public_id' => $id_name,
+            ]);
+
+            $user->image = $newimage['public_id'];
         }
         $user->save();
 
-        return response()->json(['message' => 'User Profile Updated', 'name' => $user->name, 'phone' => $user->phone, 'gender' => $user->gender, 'DOB' => $user->DOB, 'image' => url($user->image)]);
-        // return response($fullPath);
+        return response()->json(['message' => 'User Profile Updated', 'name' => $user->name, 'phone' => $user->phone, 'gender' => $user->gender, 'DOB' => $user->DOB, 'image' => Cloudinary::getUrl($user->image)]);
     }
 }

@@ -187,6 +187,7 @@ return [
          */
 
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        CloudinaryLabs\CloudinaryLaravel\CloudinaryServiceProvider::class,
 
         /*
          * Application Service Providers...
