@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('totalscores');
             $table->integer('phyicalscores');
             $table->integer('mentalscores');
+            $table->date('date');
             $table->foreignId("user_id")->references("id")->on("users")->onDelete('cascade');
             $table->timestamps();
         });

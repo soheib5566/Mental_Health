@@ -16,6 +16,7 @@ class TestscoreController extends Controller
             'totalscores' => 'required|integer',
             'mentalscores' => 'required|integer',
             'phyicalscores' => 'required|integer',
+            'date' => 'required|date|date_format:Y-m-d',
             'user_id' => 'required|exists:users,id',
         ]);
         $testscore = Testscore::create($attributes);
@@ -32,7 +33,8 @@ class TestscoreController extends Controller
                 [
                     'totalscores' => $testscore->totalscores,
                     'phyicalscores' => $testscore->phyicalscores,
-                    'mentalscores' => $testscore->mentalscores
+                    'mentalscores' => $testscore->mentalscores,
+                    'date' => $testscore->date,
                 ];
         }
 

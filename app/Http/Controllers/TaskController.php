@@ -17,8 +17,8 @@ class TaskController extends Controller
             [
                 'taskname' => 'required',
                 'date' => 'required|date',
-                'firsttime' => 'required|date_format:H:i',
-                'endtime' => 'required|date_format:H:i',
+                'firsttime' => 'required|date_format:g:i',
+                'endtime' => 'required|date_format:g:i',
                 'user_id' => 'required|exists:users,id',
             ]
         );

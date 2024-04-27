@@ -163,6 +163,7 @@ class UserController extends Controller
             'id.required' => 'ID Not exist.',
         ]);
 
+
         $user = User::findOrFail($attributes['id']);
         $user->name = $attributes['name'];
         $user->phone = $attributes['phone'];
@@ -177,8 +178,6 @@ class UserController extends Controller
                 Cloudinary::destroy($oldimage);
             }
             $id_name = str_replace(' ', '_', $user->name);
-
-
             $newimage = Cloudinary::uploadApi()->upload($request->file('image')->getRealPath(), [
                 'folder' => 'profile',
                 'resource_type' => 'auto',

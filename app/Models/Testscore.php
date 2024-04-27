@@ -14,6 +14,7 @@ class Testscore extends Model
         'totalscores',
         'phyicalscores',
         'mentalscores',
+        'date',
         'user_id',
 
     ];
