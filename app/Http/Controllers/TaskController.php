@@ -70,7 +70,7 @@ class TaskController extends Controller
                     'date' => $task->date,
                     'taskname' => $task->taskname,
                     'firsttime' => date('g:i A', strtotime($task->firsttime)),
-                    'endtime' => date('g:i A', strtotime($task->firsttime)),
+                    'endtime' => date('g:i A', strtotime($task->endtime)),
                 ];
         }
 
