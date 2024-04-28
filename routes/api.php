@@ -72,6 +72,8 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/taskalast30days/{id}', [TaskController::class, 'Getlast30days']);
 
+    Route::delete('/deletetask/{id}', [TaskController::class, 'delete']);
+
     //Testscore Route
 
     Route::middleware('api')->post('/testscore', [TestscoreController::class, 'store']);

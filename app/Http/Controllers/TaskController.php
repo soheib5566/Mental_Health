@@ -124,4 +124,13 @@ class TaskController extends Controller
             'Tasks' => count($tasks_30), 'completed' => $completed, 'not_completed' => $not_completed
         ]);
     }
+
+
+    public function delete($id)
+    {
+        $task = task::findOrFail($id);
+        $task->delete();
+
+        return response()->json(['message' => 'Task Deleted Successfully']);
+    }
 }
