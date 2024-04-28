@@ -17,8 +17,8 @@ class TaskController extends Controller
             [
                 'taskname' => 'required',
                 'date' => 'required|date',
-                'firsttime' => 'required|date_format:g:i',
-                'endtime' => 'required|date_format:g:i',
+                'firsttime' => 'required|date_format:g:i A',
+                'endtime' => 'required|date_format:g:i A',
                 'user_id' => 'required|exists:users,id',
             ]
         );
@@ -69,8 +69,8 @@ class TaskController extends Controller
                     'id' => $task->id,
                     'date' => $task->date,
                     'taskname' => $task->taskname,
-                    'firsttime' => $task->firsttime,
-                    'endtime' => $task->endtime
+                    'firsttime' => date('g:i A', strtotime($task->firsttime)),
+                    'endtime' => date('g:i A', strtotime($task->firsttime)),
                 ];
         }
 
