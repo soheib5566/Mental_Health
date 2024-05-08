@@ -203,7 +203,7 @@ class UserController extends Controller
 
     public function checktoken(Request $request)
     {
-        dd($request);
+
         $tokenExpiration = Carbon::parse($request->user()->currentAccessToken()->expires_at);
         if ($tokenExpiration->isPast()) {
             auth()->user()->currentAccessToken()->delete();
