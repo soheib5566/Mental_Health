@@ -42,6 +42,7 @@ Route::post('/forget_password', [PasswordController::class, 'forget_pass']);
 
 Route::post('/reset_password', [PasswordController::class, 'reset_password']);
 
+
 //middleware group to authincate that user can't join these
 //endpoints without the sanctum Authincation(Token)
 Route::group(['middleware' => ['auth:sanctum']], function () {
@@ -58,6 +59,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/doctors', [DoctorController::class, 'index']);
 
+    //checktokenexpiration
+
+    Route::get('/checktoken', [UserController::class, 'checktoken']);
 
 
     //Task Route
@@ -90,6 +94,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::get('/user_moods/{id}', [DailymoodController::class, 'index_moods']);
 });
+
+Route::get('/notification', [TaskController::class, 'show'])->name('task.show');
+
 Route::get('/ping', function (Request  $request) {
     $connection = DB::connection('mongodb');
     $msg = 'MongoDB is accessible!';
