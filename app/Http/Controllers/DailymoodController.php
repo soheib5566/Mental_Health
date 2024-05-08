@@ -6,6 +6,7 @@ use App\Models\dailymood;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class DailymoodController extends Controller
 {
@@ -19,6 +20,7 @@ class DailymoodController extends Controller
             'date' => 'required|date|date_format:Y/m/d H:i'
 
         ]);
+
 
         $dictionary = [
             4 => "Very Happy",

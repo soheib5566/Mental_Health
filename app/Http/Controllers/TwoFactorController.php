@@ -51,11 +51,18 @@ class TwoFactorController extends Controller
         }
 
 
+        $expiration = now()->addDays(7);
+        $token = $user->createToken($user->name, ['*'], $expiration)->plainTextToken;
 
-        $token = $user->createToken($user->name)->plainTextToken;
 
 
-        return response()->json(['id' => $user->id, 'Name' => $user->name, 'email' => $user->email, 'token' => $token]);
+        return response()->json([
+            'id' => $user->id,
+            'Name' => $user->name,
+            'email' => $user->email,
+            'token' => $token,
+            'expires_at' => $expiration->toDateString()
+        ]);
     }
 
 

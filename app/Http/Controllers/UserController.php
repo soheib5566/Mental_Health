@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+use Carbon\Carbon;
 
 class UserController extends Controller
 {
@@ -96,6 +97,9 @@ class UserController extends Controller
 
 
         $user = User::where('email', $keys['email'])->first();
+        if (!$user) {
+            return response()->json(['message' => 'Email Not Exist'], 401);
+        }
 
 
         if ($user->code) {
@@ -103,9 +107,15 @@ class UserController extends Controller
         }
 
         if (auth()->attempt($keys) && password_verify($request->password, $user->password)) {
-            $token = $user->createToken($user->name)->plainTextToken;
-
-            return response()->json(['id' => $user->id, 'Name' => $user->name, 'email' => $user->email, 'token' => $token]);
+            $expiration = now()->addDays(7);
+            $token = $user->createToken($user->name, ['*'], $expiration)->plainTextToken;
+            return response()->json([
+                'id' => $user->id,
+                'Name' => $user->name,
+                'email' => $user->email,
+                'token' => $token,
+                'expires_at' => $expiration->toDateString()
+            ]);
         } else {
             throw ValidationException::withMessages([
                 'email' => 'Email Address is wrong or Password',
@@ -189,5 +199,17 @@ class UserController extends Controller
         $user->save();
 
         return response()->json(['message' => 'User Profile Updated', 'name' => $user->name, 'phone' => $user->phone, 'gender' => $user->gender, 'DOB' => $user->DOB, 'image' => Cloudinary::getUrl($user->image)]);
+    }
+
+    public function checktoken(Request $request)
+    {
+        dd($request);
+        $tokenExpiration = Carbon::parse($request->user()->currentAccessToken()->expires_at);
+        if ($tokenExpiration->isPast()) {
+            auth()->user()->currentAccessToken()->delete();
+            return response()->json(['message' => 'Token has expired'], 401);
+        } else {
+            return response()->json(['message' => 'Token Still Active'], 200);
+        }
     }
 }
