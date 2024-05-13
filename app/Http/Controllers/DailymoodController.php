@@ -21,6 +21,15 @@ class DailymoodController extends Controller
 
         ]);
 
+        $user = User::find($request->user_id);
+
+
+        $existingMood = $user->dailymoods()
+            ->whereDate('datetime', Carbon::parse($request->date)->toDateString())
+            ->first();
+        if ($existingMood) {
+            return response()->json(['message' => 'You Already Set Mood before this day'], 401);
+        }
 
         $dictionary = [
             4 => "Very Happy",
