@@ -209,7 +209,12 @@ class UserController extends Controller
             auth()->user()->currentAccessToken()->delete();
             return response()->json(['message' => 'Token has expired'], 401);
         } else {
-            return response()->json(['message' => 'Token Still Active'], 200);
+            return response()->json([
+                'message' => 'Token Still Active',
+                'id' => auth()->user()->id,
+                'name' => auth()->user()->name,
+                'email' => auth()->user()->email,
+            ], 200);
         }
     }
 }
