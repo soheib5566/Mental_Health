@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\task;
 use App\Models\User;
 use Carbon\Carbon;
+use App\Events\NewTaskEvent;
+use Illuminate\Support\Facades\Artisan;
 
 class TaskController extends Controller
 {
@@ -25,6 +27,13 @@ class TaskController extends Controller
 
         $task = task::create($attributes);
 
+        // Artisan::call('Task:Notify', [
+        //     'task_id' => $task->id,
+        //     'user_id' => $task->user_id
+        // ]);
+        // event(new NewTaskEvent($task));
+
+
         return response()->json(["message" => "Task has been Added"]);
     }
 
@@ -43,7 +52,7 @@ class TaskController extends Controller
             return response()->json(['message' => 'Task not found'], 404);
         }
 
-        if ($task->completed == 0) {
+        if ($task->completed == null) {
             $task->update(['completed' => $request['completed']]);
 
             $task->save();
@@ -60,7 +69,7 @@ class TaskController extends Controller
     public function index($id)
     {
         $user = User::find($id);
-        $tasks = $user->tasks()->select(['id', 'date', 'taskname', 'firsttime', 'endtime'])->get();
+        $tasks = $user->tasks()->select(['id', 'date', 'taskname', 'firsttime', 'endtime', 'completed'])->get();
 
         $taskdata = [];
         foreach ($tasks as $task) {
@@ -71,12 +80,39 @@ class TaskController extends Controller
                     'taskname' => $task->taskname,
                     'firsttime' => date('g:i A', strtotime($task->firsttime)),
                     'endtime' => date('g:i A', strtotime($task->endtime)),
+                    'completed' => $task->completed
                 ];
         }
 
 
         return response()->json($taskdata);
     }
+
+
+    // public function index_date($id, $date)
+    // {
+    //     // dd($date);
+    //     $user = User::find($id);
+    //     $tasks = $user->tasks()->whereDate('date', $date)
+    //         ->select(['id', 'date', 'taskname', 'firsttime', 'endtime', 'completed'])->get();
+
+    //     $taskdata = [];
+    //     foreach ($tasks as $task) {
+    //         $taskdata[] =
+    //             [
+    //                 'id' => $task->id,
+    //                 'date' => $task->date,
+    //                 'taskname' => $task->taskname,
+    //                 'firsttime' => date('g:i A', strtotime($task->firsttime)),
+    //                 'endtime' => date('g:i A', strtotime($task->endtime)),
+    //                 'completed' => $task->completed
+    //             ];
+    //     }
+
+
+    //     return response()->json($taskdata);
+    // }
+
 
     public function Getlast7days($id)
     {
@@ -133,4 +169,12 @@ class TaskController extends Controller
 
         return response()->json(['message' => 'Task Deleted Successfully']);
     }
+
+    // public function show(task $task)
+    // {
+    //     $converttime = date('g:i A', strtotime($task->firsttime));
+
+    //     dd("your task $task->taskname is set in $converttime , get ready for it");
+    //     return response()->json(['message' => "your task $task->taskname is set in $converttime , get ready for it"]);
+    // }
 }
