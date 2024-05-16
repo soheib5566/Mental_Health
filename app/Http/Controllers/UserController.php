@@ -160,7 +160,7 @@ class UserController extends Controller
         $attributes = $request->validate([
             'id' => 'nullable|exists:users,id',
             'name' => 'nullable|string',
-            'phone' => 'nullable|string|unique:users,phone|min:11',
+            'phone' => 'nullable|string|unique:users,phone',
             'gender' => 'nullable|string',
             'DOB' => 'nullable|date|date_format:Y/m/d',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',

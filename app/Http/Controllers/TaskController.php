@@ -52,12 +52,18 @@ class TaskController extends Controller
             return response()->json(['message' => 'Task not found'], 404);
         }
 
-        if ($task->completed == null) {
+        if ($task->completed == false) {
             $task->update(['completed' => $request['completed']]);
 
             $task->save();
 
             return response()->json(['message' => 'Task Has been Completed']);
+        } else if ($task->completed = true) {
+            $task->update(['completed' => $request['completed']]);
+
+            $task->save();
+
+            return response()->json(['message' => 'Task Has been UnCompleted']);
         }
 
 
