@@ -72,6 +72,9 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 
     Route::middleware('api')->get('/tasks/{id}', [TaskController::class, 'index']);
 
+    // Route::middleware('api')->get('/tasks/{id}/{date}', [TaskController::class, 'index_date']);
+
+
     Route::get('/taskslast7days/{id}', [TaskController::class, 'Getlast7days']);
 
     Route::get('/taskalast30days/{id}', [TaskController::class, 'Getlast30days']);
