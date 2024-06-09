@@ -146,12 +146,15 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        if ($user['is_allowed']) {
-            $user['is_allowed'] = 0;
-            $user->save();
+        if ($user->is_allowed) {
+            $user->is_allowed = false;
+        } else {
+            $user->is_allowed = true;
         }
 
-        return redirect('/admindash');
+        $user->save();
+
+        return back();
     }
 
     public function put_user(Request $request)

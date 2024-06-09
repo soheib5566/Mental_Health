@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Doctor</title>
-    <link rel="stylesheet" href="{{asset('css/Edit_Style.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('css/Edit_Style.css')}}">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -14,14 +14,19 @@
         <h4 class="font-weight-bold py-3 mb-4">
             Add Doctor
         </h4>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
         <div class="card overflow-hidden">
+            <form action="/store_doctor" method="POST">
+                @csrf
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
                         <a class="list-group-item list-group-item-action active" data-toggle="list"
                             href="#account-general">Add Doctor</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list"
-                            href="#account-info">Add More Information</a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -31,60 +36,27 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-control mb-1">
+                                    <input type="text" class="form-control mb-1" name="name" value="{{ old('name') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Lang</label>
-                                    <input type="text" class="form-control">
+                                    <label class="form-label">Governorate</label>
+                                    <input type="text" class="form-control" name="gover" value="{{ old('gover') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Latitude</label>
-                                    <input type="text" class="form-control mb-1">
-                                    <div class="alert alert-warning mt-3">
-                                        The email is not confirmed. Please check  inbox.<br>
-                                        <a href="javascript:void(0)">Resend confirmation</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="account-info">
-                            <div class="card-body pb-2">
-                                <div class="form-group">
-                                    <label class="form-label">Bio</label>
-                                    <textarea class="form-control"
-                                        rows="5"></textarea>
+                                    <label class="form-label">Latitude Lines</label>
+                                    <input type="text" class="form-control" name="lat" value="{{ old('lat') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Birthday</label>
-                                    <input type="text" class="form-control" value="May 3, 1995">
+                                    <label class="form-label">longitude Lines</label>
+                                    <input type="text" class="form-control" name="lang" value="{{ old('lang') }}">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Country</label>
-                                    <select class="custom-select">
-                                        <option>KSA</option>
-                                        <option selected>Egypt</option>
-                                        <option>UAE</option>
-                                        <option>BH</option>
-                                        <option>QA</option>
-                                    </select>
+                                    <label class="form-label">Rate</label>
+                                    <input type="text" class="form-control" name="rate" value="{{ old('rate') }}">
                                 </div>
-                                <div class="form-group">
-                                    <label class="form-label">City</label>
-                                    <select class="custom-select">
-                                        <option>Alex</option>
-                                        <option selected>Cairo</option>
-                                        <option>KFS</option>
-                                        <option>Tanta</option>
-                                        <option>Aswan</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <hr class="border-light m-0">
-                            <div class="card-body pb-2">
-                                <h6 class="mb-4">Contacts</h6>
                                 <div class="form-group">
                                     <label class="form-label">Phone</label>
-                                    <input type="text" class="form-control" value="+002 (010) 456 7891">
+                                    <input type="text" class="form-control mb-1" name="phone" value="{{ old('phone') }}">
                                 </div>
                             </div>
                         </div>
@@ -102,9 +74,10 @@
             </div>
         </div>
         <div class="text-right mt-3">
-            <button type="button" class="btn btn-primary">Add</button>&nbsp;
-            <button type="button" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Add</button>&nbsp;
+            <button type="button" class="btn btn-default" onclick="window.location.href='/admindash'">Cancel</button>
         </div>
+        </form>
     </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>

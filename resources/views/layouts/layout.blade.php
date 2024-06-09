@@ -8,7 +8,7 @@
 	<!-- Boxicons -->
 	<link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="{{secure_asset('css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 
 	<title>Dashboard</title>
 </head>
@@ -19,7 +19,7 @@
 	<section id="sidebar">
 		<a href="#" class="brand">
 			<i class='bx bxs-smile'></i>
-			<span class="text">Soothe</span>
+			<span class="text">Ozey</span>
 		</a>
 		<ul class="side-menu top">
 			<li class="active">
@@ -36,7 +36,7 @@
 			</li>
 			<li>
 				<!-- هنا يتم استدعاء الدالة redirectToUsersPage() عند النقر -->
-				<a href="/doctors">
+			<a href="/doctors">
 					<i class='bx bxs-group'></i>
 					<span class="text">Doctors</span>
 				</a>
@@ -111,7 +111,7 @@
 				<li>
 					<i class='bx bxs-group'></i>
 					<span class="text">
-						<h3>{{ $doctors }}</h3>
+						<h3>{{ $doctors_count }}</h3>
 						<p>Doctors</p>
 					</span>
 				</li>
@@ -126,7 +126,7 @@
 			@yield('content')
 		</main>
 	</section>
-	<script src="{{ secure_asset('js/script.js') }}"></script>
+	<script src="{{asset('js/script.js') }}"></script>
 </body>
 
 </html>

@@ -167,7 +167,30 @@ function createDoctorsTable() {
     table.appendChild(tbody);
 
 }
-function redirectToUsersPage() {
-    window.location.href = "/users";
+// function redirectToUsersPage() {
+//     window.location.href = "/users";
+// }
+
+function toggleBlock(button) {
+    if (button.textContent === 'Block') {
+        button.textContent = 'Unblock';
+        button.style.backgroundColor = 'red';
+    } else {
+        button.textContent = 'Block';
+        button.style.backgroundColor = '';
+    }
 }
 
+// function toggleBlockStatus(button, id) {
+//     if (button.textContent === "BLOCK") {
+//         console.log("Blocked:", id);
+//         button.textContent = "Unblock";
+//         button.classList.remove("completed");
+//         button.classList.add("pending");
+//     } else {
+//         console.log("Unblocked:", id);
+//         button.textContent = "BLOCK";
+//         button.classList.remove("pending");
+//         button.classList.add("completed");
+//     }
+// }

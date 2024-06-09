@@ -43,12 +43,15 @@ class AdminController extends Controller
         $doctor = Doctor::count();
         $user = User::count();
         $users = User::all();
-        return view('index', ['doctors' => $doctor, 'userscount' => $user, 'users' => $users]);
+        return view('Dash', ['doctors_count' => $doctor, 'userscount' => $user, 'users' => $users]);
     }
     public function getuserspg()
     {
+        $doctor = Doctor::count();
+        $user = User::count();
+        $users = User::all();
 
-        return view('index');
+        return view('index', ['doctors_count' => $doctor, 'userscount' => $user, 'users' => $users]);
     }
 
     // public function indexdoctors()
