@@ -163,7 +163,7 @@ class UserController extends Controller
         $attributes = $request->validate([
             'id' => 'nullable|exists:users,id',
             'name' => 'nullable|string',
-            'phone' => 'nullable|string|unique:users,phone',
+            'phone' => 'nullable|string|unique:users,phone,' . $request->id,
             'gender' => 'nullable|string',
             'DOB' => 'nullable|date|date_format:Y/m/d',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
@@ -179,6 +179,9 @@ class UserController extends Controller
 
         $user = User::findOrFail($attributes['id']);
         $user->name = $attributes['name'];
+        if (isset($attributes['phone']) && $attributes['phone'] !== $user->phone) {
+            $user->phone = $attributes['phone'];
+        }
         $user->phone = $attributes['phone'];
         $user->gender = $attributes['gender'];
         $user->DOB = $attributes['DOB'];
