@@ -37,6 +37,8 @@ Route::get('/doctors', [DoctorController::class, 'indexdoctors']);
 
 Route::get('/add_doctor', [DoctorController::class, 'add_page']);
 
+Route::post('/store_doctor', [DoctorController::class, 'store_doctor']);
+
 Route::get('/edit_doctor/{id}', [DoctorController::class, 'edit_doctor']);
 
 Route::delete('/delete_doctor/{id}', [DoctorController::class, 'delete_doctor']);
