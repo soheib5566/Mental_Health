@@ -154,7 +154,7 @@
 								<td>{{ $user->name }}</td>
 								<td><span class="">{{ $user->phone }}</span></td>
 								<td>{{ $user->email }}</td>
-								<td class="Action"><form  method ="Post" action="admindash/{{$user->id}}">
+								<td class="Action"><form  method ="Post" action="/admindash/{{$user->id}}">
 									@method('Delete')
 									@csrf
 									<button type="submit" class="status pending" >Delete</button>
